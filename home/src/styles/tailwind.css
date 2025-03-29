@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import './typography.css' layer(components);
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --text-2xs: 0.6875rem;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-mona-sans);
+}
