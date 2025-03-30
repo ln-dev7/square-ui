@@ -24,8 +24,8 @@ const siteUrl = 'https://square.lndev.me'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Square by lndev-ui',
-    default: 'Square by lndev-ui',
+    template: '%s | Square UI by lndev-ui',
+    default: 'Square UI by lndev-ui',
   },
   description:
     'Collection of beautifully crafted open-source layouts UI built with shadcn/ui.',
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Square',
+    siteName: 'Square UI',
     images: [
       {
         url: `${siteUrl}/banner.png`,
         width: 2560,
         height: 1440,
-        alt: 'Square by lndev-ui',
+        alt: 'Square UI by lndev-ui',
       },
     ],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/banner.png`,
         width: 2560,
         height: 1440,
-        alt: 'Square',
+        alt: 'Square UI',
       },
     ],
   },

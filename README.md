@@ -1,4 +1,4 @@
-# Square
+# Square UI
 
 Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 
@@ -17,8 +17,8 @@ Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 ### 📦 Installation
 
 ```shell
-git clone https://github.com/ln-dev7/square.git
-cd square
+git clone https://github.com/ln-dev7/square-ui.git
+cd square-ui
 ```
 
 ### Install dependencies

@@ -35,12 +35,12 @@ export function Intro() {
           <Image
             src="/icon.svg"
             alt="Logo"
-            className="w-7 overflow-hidden rounded-lg sm:w-9"
+            className="w-7 rotate-[0deg] overflow-hidden rounded-lg sm:w-9"
             width={28}
             height={28}
           />
           <span className="text-xl font-bold text-white sm:text-3xl">
-            Square
+            Square UI
           </span>
         </Link>
       </div>
@@ -69,7 +69,7 @@ export function Intro() {
           Sponsor
         </IconLink>
         <IconLink
-          href="https://github.com/ln-dev7/square"
+          href="https://github.com/ln-dev7/square-ui"
           target="_blank"
           icon={GitHubIcon}
           className="flex-none"
