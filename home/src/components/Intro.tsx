@@ -60,14 +60,14 @@ export function Intro() {
         shadcn/ui.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink
+        {/* <IconLink
           href="https://store.lndev.me/buy/3e37099b-55e7-4fa9-96e6-bd24292c7be1"
           target="_blank"
           icon={BookIcon}
           className="flex-none"
         >
           Sponsor
-        </IconLink>
+        </IconLink> */}
         <IconLink
           href="https://github.com/ln-dev7/square-ui"
           target="_blank"
