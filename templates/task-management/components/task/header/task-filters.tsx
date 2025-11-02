@@ -1,7 +1,18 @@
 "use client";
 
 import * as React from "react";
-import { SlidersHorizontal, Check } from "lucide-react";
+import {
+  SlidersHorizontal,
+  Check,
+  Layers,
+  Stars,
+  InfoIcon,
+  Hexagon,
+  Minus,
+  Users,
+  User,
+  UserX,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -11,17 +22,17 @@ import {
 import { Separator } from "@/components/ui/separator";
 
 const priorities = [
-  { id: "all", name: "All priorities" },
-  { id: "urgent", name: "Urgent" },
-  { id: "high", name: "High" },
-  { id: "medium", name: "Medium" },
-  { id: "low", name: "Low" },
+  { id: "all", name: "All priorities", icon: Layers },
+  { id: "urgent", name: "Urgent", icon: Stars, color: "text-pink-500" },
+  { id: "high", name: "High", icon: InfoIcon, color: "text-red-500" },
+  { id: "medium", name: "Medium", icon: Hexagon, color: "text-cyan-500" },
+  { id: "low", name: "Low", icon: Minus, color: "text-gray-400" },
 ];
 
 const assignees = [
-  { id: "all", name: "All assignees" },
-  { id: "me", name: "Assigned to me" },
-  { id: "unassigned", name: "Unassigned" },
+  { id: "all", name: "All assignees", icon: Users },
+  { id: "me", name: "Assigned to me", icon: User },
+  { id: "unassigned", name: "Unassigned", icon: UserX },
 ];
 
 export function TaskFilters() {
@@ -37,47 +48,67 @@ export function TaskFilters() {
           <span className="hidden sm:inline">Filter</span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-64 p-3" align="start">
+      <PopoverContent className="w-72 p-4" align="start">
         <div className="space-y-4">
           <div>
-            <h4 className="text-sm font-medium mb-2">Priority</h4>
+            <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
+              <Layers className="size-4 text-muted-foreground" />
+              Priority
+            </h4>
             <div className="space-y-1">
-              {priorities.map((priority) => (
-                <Button
-                  key={priority.id}
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-between h-8"
-                  onClick={() => setSelectedPriority(priority.id)}
-                >
-                  <span className="text-sm">{priority.name}</span>
-                  {selectedPriority === priority.id && (
-                    <Check className="size-4" />
-                  )}
-                </Button>
-              ))}
+              {priorities.map((priority) => {
+                const Icon = priority.icon;
+                return (
+                  <Button
+                    key={priority.id}
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-between h-9 px-3"
+                    onClick={() => setSelectedPriority(priority.id)}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Icon
+                        className={`size-4 ${priority.color || "text-muted-foreground"}`}
+                      />
+                      <span className="text-sm">{priority.name}</span>
+                    </div>
+                    {selectedPriority === priority.id && (
+                      <Check className="size-4 text-primary" />
+                    )}
+                  </Button>
+                );
+              })}
             </div>
           </div>
 
           <Separator />
 
           <div>
-            <h4 className="text-sm font-medium mb-2">Assignee</h4>
+            <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
+              <Users className="size-4 text-muted-foreground" />
+              Assignee
+            </h4>
             <div className="space-y-1">
-              {assignees.map((assignee) => (
-                <Button
-                  key={assignee.id}
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-between h-8"
-                  onClick={() => setSelectedAssignee(assignee.id)}
-                >
-                  <span className="text-sm">{assignee.name}</span>
-                  {selectedAssignee === assignee.id && (
-                    <Check className="size-4" />
-                  )}
-                </Button>
-              ))}
+              {assignees.map((assignee) => {
+                const Icon = assignee.icon;
+                return (
+                  <Button
+                    key={assignee.id}
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-between h-9 px-3"
+                    onClick={() => setSelectedAssignee(assignee.id)}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Icon className="size-4 text-muted-foreground" />
+                      <span className="text-sm">{assignee.name}</span>
+                    </div>
+                    {selectedAssignee === assignee.id && (
+                      <Check className="size-4 text-primary" />
+                    )}
+                  </Button>
+                );
+              })}
             </div>
           </div>
 
@@ -86,13 +117,13 @@ export function TaskFilters() {
           <Button
             variant="outline"
             size="sm"
-            className="w-full"
+            className="w-full h-9"
             onClick={() => {
               setSelectedPriority("all");
               setSelectedAssignee("all");
             }}
           >
-            Clear filters
+            Clear all filters
           </Button>
         </div>
       </PopoverContent>

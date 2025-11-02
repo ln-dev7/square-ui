@@ -1,22 +1,31 @@
 "use client";
 
 import * as React from "react";
-import { ListFilter, Check } from "lucide-react";
+import {
+  ListFilter,
+  Check,
+  CircleDot,
+  Flag,
+  Calendar,
+  User,
+  ArrowDownAZ,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 const sortOptions = [
-  { id: "status", name: "Sort by status" },
-  { id: "priority", name: "Sort by priority" },
-  { id: "date", name: "Sort by date" },
-  { id: "assignee", name: "Sort by assignee" },
-  { id: "alphabetical", name: "Sort alphabetically" },
+  { id: "status", name: "Sort by status", icon: CircleDot },
+  { id: "priority", name: "Sort by priority", icon: Flag },
+  { id: "date", name: "Sort by date", icon: Calendar },
+  { id: "assignee", name: "Sort by assignee", icon: User },
+  { id: "alphabetical", name: "Sort alphabetically", icon: ArrowDownAZ },
 ];
 
 export function TaskSort() {
@@ -31,18 +40,29 @@ export function TaskSort() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-56">
-        {sortOptions.map((option, index) => (
-          <React.Fragment key={option.id}>
+        <DropdownMenuLabel className="flex items-center gap-2">
+          <ListFilter className="size-4" />
+          Sort options
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        {sortOptions.map((option) => {
+          const Icon = option.icon;
+          return (
             <DropdownMenuItem
+              key={option.id}
               onClick={() => setSelectedSort(option.id)}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between gap-2"
             >
-              <span>{option.name}</span>
-              {selectedSort === option.id && <Check className="size-4" />}
+              <div className="flex items-center gap-2.5">
+                <Icon className="size-4 text-muted-foreground" />
+                <span>{option.name}</span>
+              </div>
+              {selectedSort === option.id && (
+                <Check className="size-4 text-primary" />
+              )}
             </DropdownMenuItem>
-            {index === 0 && <DropdownMenuSeparator />}
-          </React.Fragment>
-        ))}
+          );
+        })}
       </DropdownMenuContent>
     </DropdownMenu>
   );
