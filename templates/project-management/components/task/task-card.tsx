@@ -119,7 +119,7 @@ export function TaskCard({ task }: TaskCardProps) {
                       strokeWidth={12}
                       styles={buildStyles({
                         pathColor: "#10b981",
-                        trailColor: "hsl(var(--muted))",
+                        trailColor: "#EDEDED",
                         strokeLinecap: "round",
                       })}
                     />

@@ -63,7 +63,7 @@ export const tasks: Task[] = [
     priority: "medium",
   },
 
-  // To-do - 2 tasks
+  // To-do - 4 tasks
   {
     id: "4",
     title: "Design system update",
@@ -92,13 +92,11 @@ export const tasks: Task[] = [
     progress: { completed: 0, total: 0 },
     priority: "medium",
   },
-
-  // In Progress - 3 tasks
   {
     id: "6",
     title: "Icon system",
     description: "Develop scalable icons for cohesive platform visuals",
-    status: statuses[2], // in-progress
+    status: statuses[1], // to-do
     assignees: [users[0], users[2]],
     labels: [labels[0]],
     date: "Jan 25",
@@ -110,6 +108,22 @@ export const tasks: Task[] = [
   },
   {
     id: "7",
+    title: "Task automation",
+    description: "Automate repetitive tasks to improve productivity",
+    status: statuses[1], // to-do
+    assignees: [users[2], users[3]],
+    labels: [labels[2]],
+    date: "Jan 28",
+    comments: 2,
+    attachments: 5,
+    links: 3,
+    progress: { completed: 0, total: 3 },
+    priority: "low",
+  },
+
+  // In Progress - 2 tasks
+  {
+    id: "8",
     title: "Search features",
     description: "Upgrade search for faster, accurate user results",
     status: statuses[2], // in-progress
@@ -123,7 +137,7 @@ export const tasks: Task[] = [
     priority: "urgent",
   },
   {
-    id: "8",
+    id: "9",
     title: "Checkout flow design",
     description: "Optimize checkout process to improve conversion rates",
     status: statuses[2], // in-progress
@@ -137,9 +151,9 @@ export const tasks: Task[] = [
     priority: "urgent",
   },
 
-  // Technical Review - 1 task
+  // Technical Review - 3 tasks
   {
-    id: "9",
+    id: "10",
     title: "Payment gateway integration",
     description: "Integrate Stripe payment system for subscriptions",
     status: statuses[3], // technical-review
@@ -147,15 +161,43 @@ export const tasks: Task[] = [
     labels: [labels[2]],
     date: "Jan 20",
     comments: 8,
-    attachments: 12,
+    attachments: 0,
     links: 5,
     progress: { completed: 3, total: 4 },
+    priority: "high",
+  },
+  {
+    id: "11",
+    title: "Security audit fixes",
+    description: "Implement fixes from recent security audit report",
+    status: statuses[3], // technical-review
+    assignees: [users[0]],
+    labels: [labels[2]],
+    date: "Jan 22",
+    comments: 3,
+    attachments: 7,
+    links: 2,
+    progress: { completed: 2, total: 3 },
+    priority: "urgent",
+  },
+  {
+    id: "12",
+    title: "Code review optimizations",
+    description: "Review and optimize codebase for better performance",
+    status: statuses[3], // technical-review
+    assignees: [users[1], users[2]],
+    labels: [labels[2], labels[3]],
+    date: "Jan 21",
+    comments: 10,
+    attachments: 0,
+    links: 7,
+    progress: { completed: 1, total: 2 },
     priority: "high",
   },
 
   // Paused - 5 tasks
   {
-    id: "10",
+    id: "13",
     title: "Third-party API upgrade",
     description: "Waiting for vendor to release new API version",
     status: statuses[4], // paused
@@ -169,7 +211,7 @@ export const tasks: Task[] = [
     priority: "medium",
   },
   {
-    id: "11",
+    id: "14",
     title: "Database migration",
     description: "Paused pending infrastructure team approval",
     status: statuses[4], // paused
@@ -183,7 +225,7 @@ export const tasks: Task[] = [
     priority: "high",
   },
   {
-    id: "12",
+    id: "15",
     title: "Server upgrade",
     description: "Waiting for budget approval from management",
     status: statuses[4], // paused
@@ -197,7 +239,7 @@ export const tasks: Task[] = [
     priority: "urgent",
   },
   {
-    id: "13",
+    id: "16",
     title: "Legal compliance review",
     description: "Paused pending legal team review and approval",
     status: statuses[4], // paused
@@ -211,7 +253,7 @@ export const tasks: Task[] = [
     priority: "high",
   },
   {
-    id: "14",
+    id: "17",
     title: "Cloud migration",
     description: "Waiting for vendor contract negotiations to complete",
     status: statuses[4], // paused
@@ -225,9 +267,9 @@ export const tasks: Task[] = [
     priority: "medium",
   },
 
-  // Completed - 4 tasks
+  // Completed - 2 tasks
   {
-    id: "15",
+    id: "18",
     title: "Increase conversion rate by 25%",
     description: "Boost conversions through better onboarding and experience",
     status: statuses[5], // completed
@@ -241,7 +283,7 @@ export const tasks: Task[] = [
     priority: "high",
   },
   {
-    id: "16",
+    id: "19",
     title: "Improve team efficiency",
     description: "Achieved efficiency improvements with tools and workflows",
     status: statuses[5], // completed
@@ -252,35 +294,6 @@ export const tasks: Task[] = [
     attachments: 33,
     links: 12,
     progress: { completed: 4, total: 4 },
-    priority: "medium",
-  },
-  {
-    id: "17",
-    title: "Customer feedback system",
-    description:
-      "Successfully launched new customer feedback collection system",
-    status: statuses[5], // completed
-    assignees: [users[0], users[2]],
-    labels: [labels[1], labels[3]],
-    date: "Jan 20",
-    comments: 8,
-    attachments: 10,
-    links: 4,
-    progress: { completed: 5, total: 5 },
-    priority: "high",
-  },
-  {
-    id: "18",
-    title: "Onboarding flow optimization",
-    description: "Completed optimization of user onboarding experience",
-    status: statuses[5], // completed
-    assignees: [users[1], users[2]],
-    labels: [labels[0]],
-    date: "Jan 18",
-    comments: 12,
-    attachments: 18,
-    links: 9,
-    progress: { completed: 3, total: 3 },
     priority: "medium",
   },
 ];
