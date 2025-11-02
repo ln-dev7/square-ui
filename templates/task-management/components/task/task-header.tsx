@@ -1,22 +1,33 @@
 "use client";
 
+import * as React from "react";
 import {
-  Sparkle,
-  Calendar,
-  ChevronDown,
+  Calendar as CalendarIcon,
   Plus,
   Link as LinkIcon,
-  SlidersHorizontal,
-  ListFilter,
   Github,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import Link from "next/link";
+import { TaskFilters } from "./task-filters";
+import { TaskSort } from "./task-sort";
+import { TaskAutomate } from "./task-automate";
+import { TaskImportExport } from "./task-import-export";
 
 export function TaskHeader() {
+  const [open, setOpen] = React.useState(false);
+  const [date, setDate] = React.useState<Date | undefined>(
+    new Date("2024-09-07")
+  );
   return (
     <div className="border-b border-border bg-background">
       {/* Top header */}
@@ -75,32 +86,42 @@ export function TaskHeader() {
       {/* Toolbar */}
       <div className="flex items-center justify-between px-3 lg:px-6 py-3 border-t border-border overflow-x-auto">
         <div className="flex items-center gap-2 shrink-0">
-          <Button variant="secondary" size="sm" className="sm:gap-2">
-            <SlidersHorizontal className="size-4" />
-            <span className="hidden sm:inline">Filter</span>
-          </Button>
-          <Button variant="secondary" size="sm" className="sm:gap-2">
-            <ListFilter className="size-4" />
-            <span className="hidden sm:inline">Sort</span>
-          </Button>
-          <Button variant="secondary" size="sm" className="sm:gap-2">
-            <Sparkle className="size-4" />
-            <span className="hidden sm:inline">Automate</span>
-            <span className="text-xs text-purple-600 dark:text-purple-400 font-medium">
-              Pro
-            </span>
-          </Button>
+          <TaskFilters />
+          <TaskSort />
+          <TaskAutomate />
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          <Button variant="outline" size="sm" className="gap-2 hidden lg:flex">
-            <Calendar className="size-4" />
-            Sep 7, 2024
-          </Button>
-          <Button variant="outline" size="sm" className="gap-2 hidden lg:flex">
-            Import / Export
-            <ChevronDown className="size-4" />
-          </Button>
+          <Popover open={open} onOpenChange={setOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-2 hidden lg:flex font-normal"
+              >
+                <CalendarIcon className="size-4" />
+                {date
+                  ? date.toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    })
+                  : "Select date"}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto overflow-hidden p-0" align="end">
+              <Calendar
+                mode="single"
+                selected={date}
+                captionLayout="dropdown"
+                onSelect={(selectedDate: Date | undefined) => {
+                  setDate(selectedDate);
+                  setOpen(false);
+                }}
+              />
+            </PopoverContent>
+          </Popover>
+          <TaskImportExport />
           <Button size="sm" className="sm:gap-2 shrink-0">
             <Plus className="size-4" />
             <span className="hidden sm:inline">Request task</span>
