@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  Star,
-  Settings,
-  Menu as MenuIcon,
+  Sparkle,
   Calendar,
   ChevronDown,
   Plus,
-  Share2,
+  Link,
+  SlidersHorizontal,
+  ListFilter,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -54,7 +54,7 @@ export function TaskHeader() {
             size="sm"
             className="gap-2 hidden lg:flex"
           >
-            <Share2 className="size-4" />
+            <Link className="size-4" />
             Share
           </Button>
         </div>
@@ -63,17 +63,17 @@ export function TaskHeader() {
       {/* Toolbar */}
       <div className="flex items-center justify-between px-3 lg:px-6 py-3 border-t border-border overflow-x-auto">
         <div className="flex items-center gap-2 shrink-0">
-          <Button variant="secondary" size="sm" className="gap-2">
-            <Settings className="size-4" />
-            Filter
+          <Button variant="secondary" size="sm" className="sm:gap-2">
+            <SlidersHorizontal className="size-4" />
+            <span className="hidden sm:inline">Filter</span>
           </Button>
-          <Button variant="secondary" size="sm" className="gap-2">
-            <MenuIcon className="size-4" />
-            Sort
+          <Button variant="secondary" size="sm" className="sm:gap-2">
+            <ListFilter className="size-4" />
+            <span className="hidden sm:inline">Sort</span>
           </Button>
-          <Button variant="secondary" size="sm" className="gap-2">
-            <Star className="size-4" />
-            Automate
+          <Button variant="secondary" size="sm" className="sm:gap-2">
+            <Sparkle className="size-4" />
+            <span className="hidden sm:inline">Automate</span>
             <span className="text-xs text-purple-600 dark:text-purple-400 font-medium">
               Pro
             </span>
@@ -89,9 +89,9 @@ export function TaskHeader() {
             Import / Export
             <ChevronDown className="size-4" />
           </Button>
-          <Button size="sm" className="gap-2 shrink-0">
+          <Button size="sm" className="sm:gap-2 shrink-0">
             <Plus className="size-4" />
-            Request task
+            <span className="hidden sm:inline">Request task</span>
           </Button>
         </div>
       </div>
