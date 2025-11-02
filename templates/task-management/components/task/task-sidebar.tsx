@@ -20,6 +20,8 @@ import {
   CreditCard,
   Navigation,
   Search,
+  Check,
+  Plus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -28,6 +30,13 @@ import {
   SidebarFooter,
   SidebarHeader,
 } from "@/components/ui/sidebar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -91,14 +100,55 @@ export function TaskSidebar({
 }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="pb-0">
         <div className="px-4 pt-4 pb-0">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="size-5.5 bg-linear-to-br from-purple-500 to-pink-600 rounded-sm shadow" />
-              <span className="font-semibold">Square UI</span>
-              <ChevronDown className="size-3 text-muted-foreground" />
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="flex items-center gap-3 h-auto p-0! hover:bg-transparent"
+                >
+                  <div className="size-6 bg-linear-to-br from-purple-500 to-pink-600 rounded-sm shadow flex items-center justify-center text-white text-xs font-semibold">
+                    SU
+                  </div>
+                  <span className="font-semibold">Square UI</span>
+                  <ChevronDown className="size-3 text-muted-foreground" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56" align="start">
+                <DropdownMenuItem>
+                  <div className="flex items-center gap-3 w-full">
+                    <div className="size-6 bg-linear-to-br from-purple-500 to-pink-600 rounded-sm shadow flex items-center justify-center text-white text-xs font-semibold">
+                      SU
+                    </div>
+                    <span className="font-semibold">Square UI</span>
+                    <Check className="size-4 ml-auto" />
+                  </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <div className="flex items-center gap-3 w-full">
+                    <div className="size-6 bg-linear-to-br from-blue-500 to-cyan-600 rounded-sm shadow flex items-center justify-center text-white text-xs font-semibold">
+                      CI
+                    </div>
+                    <span>Circle</span>
+                  </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <div className="flex items-center gap-3 w-full">
+                    <div className="size-6 bg-linear-to-br from-orange-500 to-red-600 rounded-sm shadow flex items-center justify-center text-white text-xs font-semibold">
+                      LN
+                    </div>
+                    <span>lndev-ui</span>
+                  </div>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Plus className="size-4" />
+                  <span>Add new team</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Image
               src="/ln.png"
               alt="lndev.me"
@@ -109,7 +159,7 @@ export function TaskSidebar({
           </div>
 
           {/* Search */}
-          <div className="mt-3 relative">
+          <div className="mt-4 relative">
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-3.5 text-muted-foreground" />
             <Input
               type="search"
