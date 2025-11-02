@@ -55,3 +55,4 @@ export function TaskColumn({ status, tasks }: TaskColumnProps) {
     </div>
   );
 }
+
