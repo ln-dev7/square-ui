@@ -7,7 +7,9 @@ import clsx from 'clsx'
 
 import { FormattedDate } from '@/components/FormattedDate'
 
-export const a = Link
+export function a(props: React.ComponentPropsWithoutRef<typeof Link>) {
+  return <Link {...props} target="_blank" rel="noopener noreferrer" />
+}
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 
@@ -16,7 +18,11 @@ export const img = function Img(props: ImagePropsWithOptionalAlt) {
     <div className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900">
       <Image
         alt=""
-        sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
+        className='object-cover'
+        width={3024}
+        height={1896}
+        quality={100}
+        priority
         {...props}
       />
       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset dark:ring-white/10" />
