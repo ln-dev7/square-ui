@@ -8,27 +8,27 @@ export interface User {
 export const users: User[] = [
    {
       id: '1',
-      name: 'Alice Johnson',
-      email: 'alice@acme.inc',
-      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=Alice Johnson',
+      name: 'Leonel Ngoya',
+      email: 'leonelngoya@gmail.com',
+      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=LeonelNgoya',
    },
    {
       id: '2',
-      name: 'Bob Smith',
-      email: 'bob@acme.inc',
-      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=Bob Smith',
+      name: 'LN',
+      email: 'me@leonelngoya.com',
+      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=LN',
    },
    {
       id: '3',
       name: 'Charlie Brown',
       email: 'charlie@acme.inc',
-      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=Charlie Brown',
+      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=CharlieBrown',
    },
    {
       id: '4',
       name: 'Diana Prince',
       email: 'diana@acme.inc',
-      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=Diana Prince',
+      avatar: 'https://api.dicebear.com/9.x/glass/svg?seed=DianaPrince',
    },
 ];
 

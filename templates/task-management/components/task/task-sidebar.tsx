@@ -95,8 +95,8 @@ export function TaskSidebar({
         <div className="px-4 pt-4 pb-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="size-5 bg-linear-to-br from-blue-500 to-purple-600 rounded" />
-              <span className="font-semibold">Acme Inc</span>
+              <div className="size-5.5 bg-linear-to-br from-purple-500 to-pink-600 rounded-sm shadow" />
+              <span className="font-semibold">Square UI</span>
               <ChevronDown className="size-3 text-muted-foreground" />
             </div>
             <Image
