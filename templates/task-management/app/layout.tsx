@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Project Management - Task Board",
-  description: "Manage your projects and tasks efficiently",
+  title: "Task Management",
+  description: "Simple board interface for managing tasks",
 };
 
 export default function RootLayout({
