@@ -21,6 +21,12 @@ import {
   FileIcon,
   ImageIcon,
   FileArchiveIcon,
+  ClockIcon,
+  CheckCheckIcon,
+  CalendarIcon,
+  TagIcon,
+  FilterIcon,
+  Volume2Icon,
 } from "lucide-react";
 import { useEmailsStore } from "@/store/emails-store";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -31,7 +37,15 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 function getFileIcon(type: string) {
@@ -122,27 +136,119 @@ export function EmailDetail() {
       <div className="flex items-center justify-between border-b border-border px-3 md:px-6 py-3 md:py-4">
         {/* Left Actions - Desktop */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="ghost" size="icon-sm">
-            <SparklesIcon className="size-4 text-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <ArchiveIcon className="size-4 text-muted-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <Settings2Icon className="size-4 text-muted-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <Trash2Icon className="size-4 text-muted-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <MailPlusIcon className="size-4 text-muted-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <FolderOpenIcon className="size-4 text-muted-foreground" />
-          </Button>
-          <Button variant="ghost" size="icon-sm">
-            <MoreVerticalIcon className="size-4 text-muted-foreground" />
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <SparklesIcon className="size-4 text-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>AI Assistant</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <ArchiveIcon className="size-4 text-muted-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Archive</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <Settings2Icon className="size-4 text-muted-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Mark as spam</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <Trash2Icon className="size-4 text-muted-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Delete</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <MailPlusIcon className="size-4 text-muted-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Mark as unread</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <FolderOpenIcon className="size-4 text-muted-foreground" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Move to folder</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <MoreVerticalIcon className="size-4 text-muted-foreground" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-64">
+              <DropdownMenuItem>
+                <ClockIcon className="size-4 mr-2" />
+                Snooze
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <CheckCheckIcon className="size-4 mr-2" />
+                Add to Tasks
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <CalendarIcon className="size-4 mr-2" />
+                Create event
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                  <TagIcon className="size-4 mr-2" />
+                  Label as
+                </DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem>Work</DropdownMenuItem>
+                  <DropdownMenuItem>Personal</DropdownMenuItem>
+                  <DropdownMenuItem>Important</DropdownMenuItem>
+                  <DropdownMenuItem>Travel</DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+              <DropdownMenuItem>
+                <FilterIcon className="size-4 mr-2" />
+                Filter messages like these
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Volume2Icon className="size-4 mr-2" />
+                Mute
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Settings2Icon className="size-4 mr-2" />
+                Switch to advanced toolbar
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Left Actions - Tablet/Mobile */}
