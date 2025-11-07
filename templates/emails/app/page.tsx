@@ -1,19 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { EmailsVerticalSidebar } from "@/components/emails/emails-vertical-sidebar";
 import { EmailsVerticalSidebarMobile } from "@/components/emails/emails-vertical-sidebar-mobile";
 import { EmailsHeader } from "@/components/emails/emails-header";
 import { EmailsHorizontalNav } from "@/components/emails/emails-horizontal-nav";
 import { EmailList } from "@/components/emails/email-list";
 import { EmailDetail } from "@/components/emails/email-detail";
-import { Drawer, DrawerContent, DrawerClose } from "@/components/ui/drawer";
+import { Drawer, DrawerContent } from "@/components/ui/drawer";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEmailsStore } from "@/store/emails-store";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { XIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function EmailsPage() {
   const { emails, selectedEmailId, selectEmail, clearSelectedEmail } =
@@ -21,22 +19,22 @@ export default function EmailsPage() {
   const isMobile = useIsMobile();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [hasInitialized, setHasInitialized] = useState(false);
+  const hasInitializedRef = useRef(false);
 
   useEffect(() => {
     // Select first email on desktop only on initial load
-    if (!isMobile && emails.length > 0 && !selectedEmailId && !hasInitialized) {
+    // Wait for isMobile to be initialized (not undefined)
+    if (
+      isMobile !== undefined &&
+      !isMobile &&
+      emails.length > 0 &&
+      !selectedEmailId &&
+      !hasInitializedRef.current
+    ) {
       selectEmail(emails[0].id);
-      setHasInitialized(true);
+      hasInitializedRef.current = true;
     }
-  }, [emails, selectedEmailId, selectEmail, isMobile, hasInitialized]);
-
-  useEffect(() => {
-    // Open drawer on mobile when email is selected
-    if (isMobile && selectedEmailId) {
-      setDrawerOpen(true);
-    }
-  }, [selectedEmailId, isMobile]);
+  }, [emails, selectedEmailId, selectEmail, isMobile]);
 
   const handleEmailClick = (emailId: string) => {
     if (isMobile) {
@@ -45,9 +43,11 @@ export default function EmailsPage() {
     }
   };
 
-  const handleDrawerClose = () => {
-    setDrawerOpen(false);
-    clearSelectedEmail();
+  const handleDrawerClose = (open: boolean) => {
+    setDrawerOpen(open);
+    if (!open) {
+      clearSelectedEmail();
+    }
   };
 
   return (
@@ -95,18 +95,9 @@ export default function EmailsPage() {
         </div>
 
         {/* Mobile Drawer */}
-        <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
+        <Drawer open={drawerOpen} onOpenChange={handleDrawerClose}>
           <DrawerContent className="h-[90vh]">
             <div className="flex-1 f-full overflow-hidden">
-              {/* <DrawerClose asChild>
-                <Button
-                  variant="ghost"
-                  size="icon-sm"
-                  onClick={handleDrawerClose}
-                >
-                  <XIcon className="size-4" />
-                </Button>
-              </DrawerClose> */}
               <EmailDetail />
             </div>
           </DrawerContent>
