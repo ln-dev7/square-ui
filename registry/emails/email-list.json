@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "email-list",
+  "type": "registry:component",
+  "title": "Email List",
+  "description": "Email list component displaying inbox messages with sender info and preview.",
+  "dependencies": ["@radix-ui/react-avatar", "date-fns", "zustand"],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/email-list.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

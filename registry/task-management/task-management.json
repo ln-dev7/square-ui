@@ -1,0 +1,155 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-management",
+  "type": "registry:block",
+  "title": "Task Management Template",
+  "description": "Simple board interface for managing tasks. Built with Next.js and shadcn/ui.",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-separator",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-tooltip",
+    "class-variance-authority",
+    "clsx",
+    "date-fns",
+    "lucide-react",
+    "next-themes",
+    "react-circular-progressbar",
+    "react-day-picker",
+    "tailwind-merge",
+    "zustand"
+  ],
+  "files": [
+    {
+      "path": "templates/task-management/app/page.tsx",
+      "type": "registry:page"
+    },
+    {
+      "path": "templates/task-management/components/task/board/task-board.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/board/task-card.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/board/task-column.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/header/task-header.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/header/task-filters.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/header/task-sort.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/header/task-automate.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/header/task-import-export.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/task/sidebar/task-sidebar.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "templates/task-management/components/ui/avatar.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/badge.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/button.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/calendar.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/card.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/dropdown-menu.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/input.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/kbd.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/popover.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/separator.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/sheet.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/sidebar.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/skeleton.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/components/ui/tooltip.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "templates/task-management/store/tasks-store.ts",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/mock-data/tasks.ts",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/mock-data/labels.ts",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/mock-data/statuses.tsx",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/mock-data/users.ts",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/lib/status-utils.tsx",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/lib/utils.ts",
+      "type": "registry:lib"
+    },
+    {
+      "path": "templates/task-management/hooks/use-mobile.ts",
+      "type": "registry:hook"
+    }
+  ]
+}

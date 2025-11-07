@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-column",
+  "type": "registry:component",
+  "title": "Task Column",
+  "description": "Task column component for organizing tasks by status with progress indicators.",
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu",
+    "lucide-react",
+    "react-circular-progressbar"
+  ],
+  "files": [
+    {
+      "path": "templates/task-management/components/task/board/task-column.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

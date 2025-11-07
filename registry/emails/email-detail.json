@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "email-detail",
+  "type": "registry:component",
+  "title": "Email Detail",
+  "description": "Email detail view component with full email content display, navigation, and actions.",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-tooltip",
+    "date-fns",
+    "lucide-react",
+    "zustand"
+  ],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/email-detail.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-sort",
+  "type": "registry:component",
+  "title": "Task Sort",
+  "description": "Sorting component for tasks with multiple sort options.",
+  "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react", "zustand"],
+  "files": [
+    {
+      "path": "templates/task-management/components/task/header/task-sort.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

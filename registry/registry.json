@@ -1,0 +1,187 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "square-ui",
+  "homepage": "https://github.com/ln-dev7/square-ui",
+  "items": [
+    {
+      "name": "emails",
+      "type": "registry:block",
+      "title": "Emails Template",
+      "description": "Modern email client interface with inbox, folders, and email details. Built with Next.js and shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/emails/emails.json",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "task-management",
+      "type": "registry:block",
+      "title": "Task Management Template",
+      "description": "Simple board interface for managing tasks. Built with Next.js and shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/task-management/task-management.json",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "email-detail",
+      "type": "registry:component",
+      "title": "Email Detail",
+      "description": "Email detail view component with full email content display.",
+      "files": [
+        {
+          "path": "registry/emails/email-detail.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "email-list",
+      "type": "registry:component",
+      "title": "Email List",
+      "description": "Email list component displaying inbox messages.",
+      "files": [
+        {
+          "path": "registry/emails/email-list.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "emails-header",
+      "type": "registry:component",
+      "title": "Emails Header",
+      "description": "Header component for the email interface.",
+      "files": [
+        {
+          "path": "registry/emails/emails-header.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "emails-horizontal-nav",
+      "type": "registry:component",
+      "title": "Emails Horizontal Navigation",
+      "description": "Horizontal navigation for email categories.",
+      "files": [
+        {
+          "path": "registry/emails/emails-horizontal-nav.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "emails-vertical-sidebar",
+      "type": "registry:component",
+      "title": "Emails Vertical Sidebar",
+      "description": "Vertical sidebar navigation for desktop email interface.",
+      "files": [
+        {
+          "path": "registry/emails/emails-vertical-sidebar.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "emails-vertical-sidebar-mobile",
+      "type": "registry:component",
+      "title": "Emails Vertical Sidebar Mobile",
+      "description": "Mobile-optimized vertical sidebar for email interface.",
+      "files": [
+        {
+          "path": "registry/emails/emails-vertical-sidebar-mobile.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-board",
+      "type": "registry:component",
+      "title": "Task Board",
+      "description": "Main task board component with drag and drop functionality.",
+      "files": [
+        {
+          "path": "registry/task-management/task-board.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-card",
+      "type": "registry:component",
+      "title": "Task Card",
+      "description": "Individual task card component.",
+      "files": [
+        {
+          "path": "registry/task-management/task-card.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-column",
+      "type": "registry:component",
+      "title": "Task Column",
+      "description": "Task column component for organizing tasks by status.",
+      "files": [
+        {
+          "path": "registry/task-management/task-column.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-header",
+      "type": "registry:component",
+      "title": "Task Header",
+      "description": "Header component for the task management interface.",
+      "files": [
+        {
+          "path": "registry/task-management/task-header.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-sidebar",
+      "type": "registry:component",
+      "title": "Task Sidebar",
+      "description": "Sidebar navigation for task management.",
+      "files": [
+        {
+          "path": "registry/task-management/task-sidebar.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-filters",
+      "type": "registry:component",
+      "title": "Task Filters",
+      "description": "Filtering component for tasks.",
+      "files": [
+        {
+          "path": "registry/task-management/task-filters.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "task-sort",
+      "type": "registry:component",
+      "title": "Task Sort",
+      "description": "Sorting component for tasks.",
+      "files": [
+        {
+          "path": "registry/task-management/task-sort.json",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

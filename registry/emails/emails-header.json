@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "emails-header",
+  "type": "registry:component",
+  "title": "Emails Header",
+  "description": "Header component for the email interface with search and settings.",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-dropdown-menu",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/emails-header.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

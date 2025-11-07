@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "emails-horizontal-nav",
+  "type": "registry:component",
+  "title": "Emails Horizontal Navigation",
+  "description": "Horizontal navigation for email categories and filters.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/emails-horizontal-nav.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
+

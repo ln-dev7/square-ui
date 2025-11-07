@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-filters",
+  "type": "registry:component",
+  "title": "Task Filters",
+  "description": "Filtering component for tasks with status, priority, assignee, and label filters.",
+  "dependencies": [
+    "@radix-ui/react-popover",
+    "@radix-ui/react-separator",
+    "lucide-react",
+    "zustand"
+  ],
+  "files": [
+    {
+      "path": "templates/task-management/components/task/header/task-filters.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

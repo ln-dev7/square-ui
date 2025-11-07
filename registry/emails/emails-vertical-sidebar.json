@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "emails-vertical-sidebar",
+  "type": "registry:component",
+  "title": "Emails Vertical Sidebar",
+  "description": "Vertical sidebar navigation for desktop email interface with folders and labels.",
+  "dependencies": [
+    "@radix-ui/react-separator",
+    "@radix-ui/react-tooltip",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/emails-vertical-sidebar.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
+

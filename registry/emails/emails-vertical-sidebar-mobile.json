@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "emails-vertical-sidebar-mobile",
+  "type": "registry:component",
+  "title": "Emails Vertical Sidebar Mobile",
+  "description": "Mobile-optimized vertical sidebar for email interface.",
+  "dependencies": [
+    "@radix-ui/react-separator",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/emails/components/emails/emails-vertical-sidebar-mobile.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
+

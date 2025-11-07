@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-sidebar",
+  "type": "registry:component",
+  "title": "Task Sidebar",
+  "description": "Sidebar navigation for task management with projects and team sections.",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-separator",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/task-management/components/task/sidebar/task-sidebar.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

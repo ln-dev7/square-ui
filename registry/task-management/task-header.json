@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-header",
+  "type": "registry:component",
+  "title": "Task Header",
+  "description": "Header component for the task management interface with filters, sort, and actions.",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-separator",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "templates/task-management/components/task/header/task-header.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
