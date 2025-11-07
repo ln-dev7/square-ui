@@ -3,6 +3,7 @@
 import { format } from "date-fns";
 import { useEmailsStore } from "@/store/emails-store";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { VerifiedIcon } from "@/components/ui/verified-icon";
 import { cn } from "@/lib/utils";
 
 interface EmailListProps {
@@ -53,9 +54,7 @@ export function EmailList({ onEmailClick }: EmailListProps) {
                 !isRead && "bg-muted/50"
               )}
             >
-              <div
-                className={cn("flex w-full gap-2.5")}
-              >
+              <div className={cn("flex w-full gap-2.5")}>
                 <Avatar className="mt-1.5 size-7 shrink-0">
                   <AvatarImage src={email.from.avatar} alt={email.from.name} />
                   <AvatarFallback>{email.from.name.charAt(0)}</AvatarFallback>
@@ -75,37 +74,9 @@ export function EmailList({ onEmailClick }: EmailListProps) {
                         >
                           {email.from.name}
                         </p>
-                        <svg
-                          className="size-4 shrink-0"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                        >
-                          <circle
-                            cx="8"
-                            cy="8"
-                            r="8"
-                            fill="url(#seal-gradient-{email.id})"
-                          />
-                          <path
-                            d="M5 8l2 2 4-4"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <defs>
-                            <linearGradient
-                              id={`seal-gradient-${email.id}`}
-                              x1="0"
-                              y1="0"
-                              x2="16"
-                              y2="16"
-                            >
-                              <stop offset="0%" stopColor="#38bdf8" />
-                              <stop offset="100%" stopColor="#0ea5e9" />
-                            </linearGradient>
-                          </defs>
-                        </svg>
+                        {email.from.verified && (
+                          <VerifiedIcon className="size-4 shrink-0" />
+                        )}
                       </div>
                       <p className="truncate text-[12px] tracking-tight text-[#38bdf8]">
                         {email.from.email}

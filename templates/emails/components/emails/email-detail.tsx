@@ -46,6 +46,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { VerifiedIcon } from "@/components/ui/verified-icon";
 import { cn } from "@/lib/utils";
 
 function getFileIcon(type: string) {
@@ -349,37 +350,9 @@ export function EmailDetail() {
                 <p className="font-medium text-sm md:text-base text-foreground truncate">
                   {email.from.name}
                 </p>
-                <svg
-                  className="size-3 md:size-4 shrink-0"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <circle
-                    cx="8"
-                    cy="8"
-                    r="8"
-                    fill="url(#seal-gradient-detail)"
-                  />
-                  <path
-                    d="M5 8l2 2 4-4"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="seal-gradient-detail"
-                      x1="0"
-                      y1="0"
-                      x2="16"
-                      y2="16"
-                    >
-                      <stop offset="0%" stopColor="#38bdf8" />
-                      <stop offset="100%" stopColor="#0ea5e9" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                {email.from.verified && (
+                  <VerifiedIcon className="size-3 md:size-4 shrink-0" />
+                )}
               </div>
               <p className="text-[12px] md:text-[14px] text-muted-foreground truncate">
                 <span className="hidden sm:inline">From: </span>
