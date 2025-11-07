@@ -7,7 +7,7 @@
   "dependencies": ["@radix-ui/react-avatar", "date-fns", "zustand"],
   "files": [
     {
-      "path": "templates/emails/components/emails/email-list.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-list.tsx",
       "type": "registry:component"
     }
   ]

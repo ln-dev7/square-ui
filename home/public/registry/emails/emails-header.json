@@ -11,7 +11,7 @@
   ],
   "files": [
     {
-      "path": "templates/emails/components/emails/emails-header.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-header.tsx",
       "type": "registry:component"
     }
   ]

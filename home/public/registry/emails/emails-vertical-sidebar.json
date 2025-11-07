@@ -11,7 +11,7 @@
   ],
   "files": [
     {
-      "path": "templates/emails/components/emails/emails-vertical-sidebar.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-vertical-sidebar.tsx",
       "type": "registry:component"
     }
   ]

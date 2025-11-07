@@ -23,89 +23,88 @@
   ],
   "files": [
     {
-      "path": "templates/emails/app/page.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/app/page.tsx",
       "type": "registry:page"
     },
     {
-      "path": "templates/emails/components/emails/email-detail.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-detail.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/emails/email-list.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-list.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/emails/emails-header.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-header.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/emails/emails-horizontal-nav.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-horizontal-nav.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/emails/emails-vertical-sidebar.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-vertical-sidebar.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/emails/emails-vertical-sidebar-mobile.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-vertical-sidebar-mobile.tsx",
       "type": "registry:component"
     },
     {
-      "path": "templates/emails/components/ui/avatar.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/avatar.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/button.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/button.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/drawer.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/drawer.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/dropdown-menu.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/dropdown-menu.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/separator.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/separator.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/sheet.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/sheet.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/tooltip.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/tooltip.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/components/ui/verified-icon.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/ui/verified-icon.tsx",
       "type": "registry:ui"
     },
     {
-      "path": "templates/emails/store/emails-store.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/store/emails-store.ts",
       "type": "registry:lib"
     },
     {
-      "path": "templates/emails/mock-data/emails.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/mock-data/emails.ts",
       "type": "registry:lib"
     },
     {
-      "path": "templates/emails/mock-data/labels.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/mock-data/labels.ts",
       "type": "registry:lib"
     },
     {
-      "path": "templates/emails/mock-data/users.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/mock-data/users.ts",
       "type": "registry:lib"
     },
     {
-      "path": "templates/emails/hooks/use-mobile.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/hooks/use-mobile.ts",
       "type": "registry:hook"
     },
     {
-      "path": "templates/emails/lib/utils.ts",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/lib/utils.ts",
       "type": "registry:lib"
     }
   ]
 }
-
