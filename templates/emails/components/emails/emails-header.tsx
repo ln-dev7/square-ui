@@ -101,6 +101,16 @@ export function EmailsHeader({ onMobileMenuClick }: EmailsHeaderProps) {
 
       {/* Right Section - Mobile */}
       <div className="flex md:hidden items-center gap-2">
+        <Button variant="ghost" size="icon-sm" asChild>
+          <Link
+            href="https://github.com/ln-dev7/square-ui/tree/master/templates/emails"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github className="size-4" />
+          </Link>
+        </Button>
+
         <ThemeToggle />
 
         <DropdownMenu>
