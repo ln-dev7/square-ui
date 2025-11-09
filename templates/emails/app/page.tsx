@@ -53,12 +53,10 @@ export default function EmailsPage() {
   return (
     <TooltipProvider>
       <div className="flex h-screen overflow-hidden bg-background">
-        {/* Vertical Sidebar - Desktop */}
         <div className="hidden md:block">
           <EmailsVerticalSidebar />
         </div>
 
-        {/* Vertical Sidebar - Mobile Sheet */}
         <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
           <SheetContent
             side="left"
@@ -70,31 +68,24 @@ export default function EmailsPage() {
           </SheetContent>
         </Sheet>
 
-        {/* Main Content */}
         <div className="flex flex-1 flex-col overflow-hidden">
-          {/* Top Header */}
           <EmailsHeader onMobileMenuClick={() => setSidebarOpen(true)} />
 
-          {/* Horizontal Navigation - Hidden on mobile */}
           <div className="hidden md:block">
             <EmailsHorizontalNav />
           </div>
 
-          {/* Content Area */}
           <div className="flex flex-1 overflow-hidden">
-            {/* Email List - Full width on mobile */}
             <div className="w-full md:w-[320px] border-r border-border">
               <EmailList onEmailClick={handleEmailClick} />
             </div>
 
-            {/* Email Detail - Hidden on mobile, shown in drawer */}
             <div className="hidden md:block flex-1">
               <EmailDetail />
             </div>
           </div>
         </div>
 
-        {/* Mobile Drawer */}
         <Drawer open={drawerOpen} onOpenChange={handleDrawerClose}>
           <DrawerContent className="h-[90vh]">
             <div className="flex-1 f-full overflow-hidden">

@@ -46,7 +46,6 @@ export function EmailsVerticalSidebar({
 
   return (
     <div className="flex h-screen w-14 flex-col items-center gap-4 border-r border-border bg-background py-4">
-      {/* Logo/Home Button */}
       <Button
         variant="default"
         size="icon-sm"
@@ -71,7 +70,6 @@ export function EmailsVerticalSidebar({
         </svg>
       </Button>
 
-      {/* Top Navigation Icons */}
       <div className="flex flex-col gap-2">
         {topIcons.map((item) => (
           <Tooltip key={item.label}>
@@ -93,10 +91,8 @@ export function EmailsVerticalSidebar({
         ))}
       </div>
 
-      {/* Spacer */}
       <div className="flex-1" />
 
-      {/* Bottom Icons */}
       <div className="flex flex-col gap-2">
         {bottomIcons.map((item) => (
           <Tooltip key={item.label}>
@@ -115,7 +111,6 @@ export function EmailsVerticalSidebar({
         ))}
       </div>
 
-      {/* User Avatar */}
       <Avatar className="size-8 cursor-pointer">
         <AvatarImage src="https://api.dicebear.com/9.x/glass/svg?seed=User" />
         <AvatarFallback>U</AvatarFallback>

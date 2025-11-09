@@ -30,7 +30,6 @@ export function EmailList({ onEmailClick }: EmailListProps) {
 
   return (
     <div className="flex h-full flex-col overflow-hidden bg-card">
-      {/* Header */}
       <div className="flex items-center justify-between border-b border-border px-5 py-3">
         <div className="flex items-center gap-2">
           <div className="size-3.5 rounded border border-border" />
@@ -38,7 +37,6 @@ export function EmailList({ onEmailClick }: EmailListProps) {
         </div>
       </div>
 
-      {/* Emails List */}
       <div className="flex-1 overflow-y-auto">
         {emails.map((email, index) => {
           const isSelected = selectedEmailId === email.id;

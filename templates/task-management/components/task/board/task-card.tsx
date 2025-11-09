@@ -29,9 +29,7 @@ export function TaskCard({ task }: TaskCardProps) {
 
   return (
     <div className="bg-background shrink-0 rounded-lg overflow-hidden border border-border">
-      {/* Main content */}
       <div className="px-3 py-2.5">
-        {/* Title with status icon */}
         <div className="flex items-center gap-2 mb-2">
           <div className="size-5 mt-0.5 shrink-0 flex items-center justify-center bg-muted rounded-sm p-1">
             <StatusIcon />
@@ -53,12 +51,10 @@ export function TaskCard({ task }: TaskCardProps) {
           )}
         </div>
 
-        {/* Description */}
         <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
           {task.description}
         </p>
 
-        {/* Labels */}
         {task.labels.length > 0 && (
           <div className="flex flex-wrap gap-1.5">
             {task.labels.map((label) => (
@@ -77,10 +73,8 @@ export function TaskCard({ task }: TaskCardProps) {
         )}
       </div>
 
-      {/* Footer with metadata */}
       <div className="px-3 py-2.5 border-t border-border border-dashed">
         <div className="flex items-center justify-between flex-wrap gap-2">
-          {/* Left side - metadata */}
           <div className="flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
             {task.date && (
               <div className="flex items-center gap-1.5 border border-border rounded-sm py-1 px-2">
@@ -132,7 +126,6 @@ export function TaskCard({ task }: TaskCardProps) {
             )}
           </div>
 
-          {/* Right side - avatars */}
           {task.assignees.length > 0 && (
             <div className="flex -space-x-2">
               {task.assignees.map((user) => (

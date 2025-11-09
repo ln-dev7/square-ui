@@ -133,9 +133,7 @@ export function EmailDetail() {
 
   return (
     <div className="flex h-full flex-col bg-card">
-      {/* Header Actions */}
       <div className="flex items-center justify-between border-b border-border px-3 md:px-6 py-3 md:py-4">
-        {/* Left Actions - Desktop */}
         <div className="hidden lg:flex items-center gap-3">
           <Tooltip>
             <TooltipTrigger asChild>
@@ -252,7 +250,6 @@ export function EmailDetail() {
           </DropdownMenu>
         </div>
 
-        {/* Left Actions - Tablet/Mobile */}
         <div className="flex lg:hidden items-center gap-1 md:gap-2">
           <Button variant="ghost" size="icon-sm">
             <SparklesIcon className="size-4 text-foreground" />
@@ -289,7 +286,6 @@ export function EmailDetail() {
           </DropdownMenu>
         </div>
 
-        {/* Right Actions */}
         <div className="flex items-center gap-2 md:gap-3">
           <Button
             variant="ghost"
@@ -337,7 +333,6 @@ export function EmailDetail() {
         </div>
       </div>
 
-      {/* Email Header */}
       <div className="border-b border-border px-3 md:px-6 py-3 md:py-4">
         <div className="flex items-start md:items-center justify-between gap-2 md:gap-4">
           <div className="flex items-start md:items-center gap-2 md:gap-2.5 flex-1 min-w-0">
@@ -364,7 +359,6 @@ export function EmailDetail() {
             </div>
           </div>
 
-          {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <p className="hidden lg:block text-[14px] text-muted-foreground opacity-70 whitespace-nowrap">
               {format(email.date, "MMMM dd, yyyy hh:mm")}
@@ -417,7 +411,6 @@ export function EmailDetail() {
             </DropdownMenu>
           </div>
 
-          {/* Mobile Actions */}
           <div className="flex md:hidden items-center gap-1 shrink-0">
             <Button
               variant="ghost"
@@ -463,7 +456,6 @@ export function EmailDetail() {
         </div>
       </div>
 
-      {/* Email Content */}
       <div className="flex-1 overflow-y-auto px-3 md:px-6 py-3 md:py-4">
         <p className="mb-3 md:mb-4 text-[18px] md:text-[20px] font-medium leading-tight tracking-tight text-foreground">
           {email.subject}

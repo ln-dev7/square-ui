@@ -29,9 +29,7 @@ export function EmailsHeader({ onMobileMenuClick }: EmailsHeaderProps) {
   const { emails } = useEmailsStore();
   return (
     <div className="flex h-14 items-center justify-between border-b border-border bg-background px-3 md:px-6">
-      {/* Left Section */}
       <div className="flex flex-1 items-center gap-2 md:gap-4">
-        {/* Mobile Menu Button */}
         <Button
           variant="ghost"
           size="icon-sm"
@@ -55,7 +53,6 @@ export function EmailsHeader({ onMobileMenuClick }: EmailsHeaderProps) {
         </div>
       </div>
 
-      {/* Right Section - Desktop */}
       <div className="hidden md:flex items-center gap-4">
         <div className="flex items-center gap-2">
           <p className="text-[13px] text-muted-foreground">
@@ -99,7 +96,6 @@ export function EmailsHeader({ onMobileMenuClick }: EmailsHeaderProps) {
         </div>
       </div>
 
-      {/* Right Section - Mobile */}
       <div className="flex md:hidden items-center gap-2">
         <Button variant="ghost" size="icon-sm" asChild>
           <Link

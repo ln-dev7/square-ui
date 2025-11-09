@@ -56,7 +56,6 @@ export function EmailsHorizontalNav() {
   return (
     <div className="flex h-[54px] items-center border-b border-border bg-background px-3 md:px-4">
       <div className="flex items-center gap-2 md:gap-3 w-full">
-        {/* Compose Button */}
         <Button
           size="sm"
           className="relative h-[30px] shrink-0 overflow-hidden bg-linear-to-r from-white to-white hover:opacity-90"
@@ -68,7 +67,6 @@ export function EmailsHorizontalNav() {
 
         <Separator orientation="vertical" className="h-5 hidden sm:block" />
 
-        {/* All Folders - Extra Large Screens (1536px+) */}
         <div className="hidden 2xl:flex items-center gap-2.5 flex-1">
           {allFolders.map((folder) => {
             const Icon = folder.icon;
@@ -95,7 +93,6 @@ export function EmailsHorizontalNav() {
           })}
         </div>
 
-        {/* Main Folders + Dropdown - Large Screens (1280px - 1536px) */}
         <div className="hidden xl:flex 2xl:hidden items-center gap-2.5 flex-1">
           {mainFolders.map((folder) => {
             const Icon = folder.icon;
@@ -150,7 +147,6 @@ export function EmailsHorizontalNav() {
           </DropdownMenu>
         </div>
 
-        {/* First 3 Folders + Dropdown - Medium Screens (1024px - 1280px) */}
         <div className="hidden lg:flex xl:hidden items-center gap-2.5 flex-1">
           {mainFolders.slice(0, 3).map((folder) => {
             const Icon = folder.icon;
@@ -221,7 +217,6 @@ export function EmailsHorizontalNav() {
           </DropdownMenu>
         </div>
 
-        {/* First 2 Folders + Dropdown - Tablet (768px - 1024px) */}
         <div className="hidden md:flex lg:hidden items-center gap-2 flex-1">
           {mainFolders.slice(0, 2).map((folder) => {
             const Icon = folder.icon;
@@ -293,7 +288,6 @@ export function EmailsHorizontalNav() {
           </DropdownMenu>
         </div>
 
-        {/* All in Dropdown - Mobile (< 768px) */}
         <div className="flex md:hidden items-center gap-2 flex-1">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

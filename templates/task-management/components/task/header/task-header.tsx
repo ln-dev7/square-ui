@@ -30,7 +30,6 @@ export function TaskHeader() {
   );
   return (
     <div className="border-b border-border bg-background">
-      {/* Top header */}
       <div className="flex items-center justify-between px-3 lg:px-6 py-3">
         <div className="flex items-center gap-2">
           <SidebarTrigger />
@@ -83,7 +82,6 @@ export function TaskHeader() {
         </div>
       </div>
 
-      {/* Toolbar */}
       <div className="flex items-center justify-between px-3 lg:px-6 py-3 border-t border-border overflow-x-auto">
         <div className="flex items-center gap-2 shrink-0">
           <TaskFilters />

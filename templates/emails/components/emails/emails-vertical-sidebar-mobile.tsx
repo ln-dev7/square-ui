@@ -41,7 +41,6 @@ export function EmailsVerticalSidebarMobile({
 
   return (
     <div className="flex h-screen w-full flex-col items-start gap-4 border-r border-border bg-background py-4 px-3">
-      {/* Logo/Home Button */}
       <div className="flex items-center gap-2">
         <Button
           variant="default"
@@ -72,7 +71,6 @@ export function EmailsVerticalSidebarMobile({
         </div>
       </div>
 
-      {/* Top Navigation Items */}
       <div className="flex w-full flex-col gap-1">
         {topItems.map((item) => (
           <Button
@@ -91,10 +89,8 @@ export function EmailsVerticalSidebarMobile({
         ))}
       </div>
 
-      {/* Spacer */}
       <div className="flex-1" />
 
-      {/* Bottom Items */}
       <div className="flex w-full flex-col gap-1">
         {bottomItems.map((item) => (
           <Button
@@ -110,7 +106,6 @@ export function EmailsVerticalSidebarMobile({
         ))}
       </div>
 
-      {/* User Avatar */}
       <Button
         variant="ghost"
         className="w-full justify-start gap-2 px-3 h-auto py-2"
