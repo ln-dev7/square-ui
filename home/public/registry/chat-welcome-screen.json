@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-welcome-screen",
+  "type": "registry:component",
+  "title": "Chat Welcome Screen",
+  "description": "Welcome screen for chat application with mode selection and AI branding.",
+  "registryDependencies": [
+    "button"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-welcome-screen.tsx",
+      "type": "registry:component",
+      "target": "components/chat-welcome-screen.tsx"
+    }
+  ]
+}
+

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-sidebar",
+  "type": "registry:component",
+  "title": "Chat Sidebar",
+  "description": "Chat sidebar component with navigation, recent and archived conversations, and team selection.",
+  "registryDependencies": [
+    "button",
+    "input",
+    "separator",
+    "dropdown-menu"
+  ],
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-separator",
+    "lucide-react",
+    "zustand"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-sidebar.tsx",
+      "type": "registry:component",
+      "target": "components/chat-sidebar.tsx"
+    }
+  ]
+}
+

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat",
+  "type": "registry:block",
+  "title": "Chat Application",
+  "description": "A complete chat application interface with sidebar, conversation view, and AI chat features.",
+  "registryDependencies": [
+    "button",
+    "input",
+    "textarea",
+    "avatar",
+    "dropdown-menu",
+    "separator",
+    "sheet",
+    "tooltip"
+  ],
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-separator",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-tooltip",
+    "date-fns",
+    "lucide-react",
+    "next-themes",
+    "vaul",
+    "zustand"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/app/page.tsx",
+      "type": "registry:page",
+      "target": "app/page.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/app/layout.tsx",
+      "type": "registry:page",
+      "target": "app/layout.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/app/globals.css",
+      "type": "registry:file",
+      "target": "app/globals.css"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-main.tsx",
+      "type": "registry:component",
+      "target": "components/chat-main.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-sidebar.tsx",
+      "type": "registry:component",
+      "target": "components/chat-sidebar.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-conversation-view.tsx",
+      "type": "registry:component",
+      "target": "components/chat-conversation-view.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-message.tsx",
+      "type": "registry:component",
+      "target": "components/chat-message.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-input-box.tsx",
+      "type": "registry:component",
+      "target": "components/chat-input-box.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-welcome-screen.tsx",
+      "type": "registry:component",
+      "target": "components/chat-welcome-screen.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/ui/logo.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/logo.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/ui/grid-pattern.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/grid-pattern.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/store/chat-store.ts",
+      "type": "registry:file",
+      "target": "store/chat-store.ts"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/mock-data/chats.ts",
+      "type": "registry:file",
+      "target": "mock-data/chats.ts"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/hooks/use-mobile.ts",
+      "type": "registry:hook",
+      "target": "hooks/use-mobile.ts"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/lib/utils.ts",
+      "type": "registry:lib",
+      "target": "lib/utils.ts"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/theme-provider.tsx",
+      "type": "registry:component",
+      "target": "components/theme-provider.tsx"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/theme-toggle.tsx",
+      "type": "registry:component",
+      "target": "components/theme-toggle.tsx"
+    }
+  ]
+}
+

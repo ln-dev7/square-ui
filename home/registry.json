@@ -183,6 +183,90 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "chat",
+      "type": "registry:block",
+      "title": "Chat Application",
+      "description": "A complete chat application interface with sidebar, conversation view, and AI chat features. Built with Next.js and shadcn/ui.",
+      "files": [
+        {
+          "path": "chat.json",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "chat-main",
+      "type": "registry:component",
+      "title": "Chat Main",
+      "description": "Main chat component that handles conversation state.",
+      "files": [
+        {
+          "path": "chat-main.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-sidebar",
+      "type": "registry:component",
+      "title": "Chat Sidebar",
+      "description": "Chat sidebar with navigation and conversation list.",
+      "files": [
+        {
+          "path": "chat-sidebar.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-conversation-view",
+      "type": "registry:component",
+      "title": "Chat Conversation View",
+      "description": "Chat conversation view displaying messages.",
+      "files": [
+        {
+          "path": "chat-conversation-view.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-message",
+      "type": "registry:component",
+      "title": "Chat Message",
+      "description": "Individual chat message component.",
+      "files": [
+        {
+          "path": "chat-message.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-input-box",
+      "type": "registry:component",
+      "title": "Chat Input Box",
+      "description": "Chat input component with AI model selection.",
+      "files": [
+        {
+          "path": "chat-input-box.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-welcome-screen",
+      "type": "registry:component",
+      "title": "Chat Welcome Screen",
+      "description": "Welcome screen for chat application.",
+      "files": [
+        {
+          "path": "chat-welcome-screen.json",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

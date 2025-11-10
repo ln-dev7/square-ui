@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-conversation-view",
+  "type": "registry:component",
+  "title": "Chat Conversation View",
+  "description": "Chat conversation view displaying messages with input box for continuing the conversation.",
+  "registryDependencies": [
+    "button",
+    "textarea"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-conversation-view.tsx",
+      "type": "registry:component",
+      "target": "components/chat-conversation-view.tsx"
+    }
+  ]
+}
+

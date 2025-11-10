@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-input-box",
+  "type": "registry:component",
+  "title": "Chat Input Box",
+  "description": "Chat input component with AI model selection, deep search, and file attachment options.",
+  "registryDependencies": [
+    "button",
+    "textarea",
+    "dropdown-menu"
+  ],
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-input-box.tsx",
+      "type": "registry:component",
+      "target": "components/chat-input-box.tsx"
+    }
+  ]
+}
+

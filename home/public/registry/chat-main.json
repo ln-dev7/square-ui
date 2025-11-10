@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-main",
+  "type": "registry:component",
+  "title": "Chat Main",
+  "description": "Main chat component that handles conversation state and switches between welcome and conversation views.",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-main.tsx",
+      "type": "registry:component",
+      "target": "components/chat-main.tsx"
+    }
+  ]
+}
+

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-message",
+  "type": "registry:component",
+  "title": "Chat Message",
+  "description": "Individual chat message component displaying user and AI messages with different styles.",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "dependencies": [
+    "@radix-ui/react-avatar"
+  ],
+  "files": [
+    {
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-message.tsx",
+      "type": "registry:component",
+      "target": "components/chat-message.tsx"
+    }
+  ]
+}
+
