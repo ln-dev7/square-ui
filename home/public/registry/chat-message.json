@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-message.tsx",
+      "path": "../../../templates/chat/components/chat/chat-message.tsx",
       "type": "registry:component",
       "target": "components/chat-message.tsx"
     }

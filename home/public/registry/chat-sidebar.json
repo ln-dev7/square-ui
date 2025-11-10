@@ -18,7 +18,7 @@
   ],
   "files": [
     {
-      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-sidebar.tsx",
+      "path": "../../../templates/chat/components/chat/chat-sidebar.tsx",
       "type": "registry:component",
       "target": "components/chat-sidebar.tsx"
     }

@@ -13,7 +13,7 @@
   ],
   "files": [
     {
-      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/task-management/components/task/header/task-filters.tsx",
+      "path": "../../../templates/task-management/components/task/header/task-filters.tsx",
       "type": "registry:component",
       "target": "components/task-filters.tsx"
     }
