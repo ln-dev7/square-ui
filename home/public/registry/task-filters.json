@@ -13,7 +13,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/task-management/components/task/header/task-filters.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-filters.tsx",
       "type": "registry:component",
       "target": "components/task-filters.tsx"
     }

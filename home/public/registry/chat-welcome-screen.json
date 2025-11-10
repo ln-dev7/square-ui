@@ -12,10 +12,9 @@
   ],
   "files": [
     {
-      "path": "../../../templates/chat/components/chat/chat-welcome-screen.tsx",
+      "path": "../registry-files/chat/components/chat/chat-welcome-screen.tsx",
       "type": "registry:component",
       "target": "components/chat-welcome-screen.tsx"
     }
   ]
 }
-

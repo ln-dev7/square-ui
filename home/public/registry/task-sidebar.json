@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/task-management/components/task/sidebar/task-sidebar.tsx",
+      "path": "../registry-files/task-management/components/task/sidebar/task-sidebar.tsx",
       "type": "registry:component",
       "target": "components/task-sidebar.tsx"
     }

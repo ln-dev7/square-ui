@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/task-management/components/task/header/task-header.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-header.tsx",
       "type": "registry:component",
       "target": "components/task-header.tsx"
     }

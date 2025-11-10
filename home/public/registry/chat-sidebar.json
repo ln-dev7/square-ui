@@ -18,10 +18,9 @@
   ],
   "files": [
     {
-      "path": "../../../templates/chat/components/chat/chat-sidebar.tsx",
+      "path": "../registry-files/chat/components/chat/chat-sidebar.tsx",
       "type": "registry:component",
       "target": "components/chat-sidebar.tsx"
     }
   ]
 }
-

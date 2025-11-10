@@ -7,10 +7,9 @@
   "dependencies": [],
   "files": [
     {
-      "path": "../../../templates/chat/components/chat/chat-main.tsx",
+      "path": "../registry-files/chat/components/chat/chat-main.tsx",
       "type": "registry:component",
       "target": "components/chat-main.tsx"
     }
   ]
 }
-

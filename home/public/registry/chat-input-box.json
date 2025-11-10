@@ -15,10 +15,9 @@
   ],
   "files": [
     {
-      "path": "../../../templates/chat/components/chat/chat-input-box.tsx",
+      "path": "../registry-files/chat/components/chat/chat-input-box.tsx",
       "type": "registry:component",
       "target": "components/chat-input-box.tsx"
     }
   ]
 }
-

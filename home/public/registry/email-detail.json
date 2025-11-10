@@ -20,7 +20,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/emails/components/emails/email-detail.tsx",
+      "path": "../registry-files/emails/components/emails/email-detail.tsx",
       "type": "registry:component",
       "target": "components/email-detail.tsx"
     }

@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/emails/components/emails/emails-horizontal-nav.tsx",
+      "path": "../registry-files/emails/components/emails/emails-horizontal-nav.tsx",
       "type": "registry:component",
       "target": "components/emails-horizontal-nav.tsx"
     }

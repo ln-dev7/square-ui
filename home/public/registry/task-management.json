@@ -40,162 +40,162 @@
   ],
   "files": [
     {
-      "path": "../../../templates/task-management/app/page.tsx",
+      "path": "../registry-files/task-management/app/page.tsx",
       "type": "registry:page",
       "target": "app/page.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/board/task-board.tsx",
+      "path": "../registry-files/task-management/components/task/board/task-board.tsx",
       "type": "registry:component",
       "target": "components/task-board.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/board/task-card.tsx",
+      "path": "../registry-files/task-management/components/task/board/task-card.tsx",
       "type": "registry:component",
       "target": "components/task-card.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/board/task-column.tsx",
+      "path": "../registry-files/task-management/components/task/board/task-column.tsx",
       "type": "registry:component",
       "target": "components/task-column.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/header/task-header.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-header.tsx",
       "type": "registry:component",
       "target": "components/task-header.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/header/task-filters.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-filters.tsx",
       "type": "registry:component",
       "target": "components/task-filters.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/header/task-sort.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-sort.tsx",
       "type": "registry:component",
       "target": "components/task-sort.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/header/task-automate.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-automate.tsx",
       "type": "registry:component",
       "target": "components/task-automate.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/header/task-import-export.tsx",
+      "path": "../registry-files/task-management/components/task/header/task-import-export.tsx",
       "type": "registry:component",
       "target": "components/task-import-export.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/task/sidebar/task-sidebar.tsx",
+      "path": "../registry-files/task-management/components/task/sidebar/task-sidebar.tsx",
       "type": "registry:component",
       "target": "components/task-sidebar.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/avatar.tsx",
+      "path": "../registry-files/task-management/components/ui/avatar.tsx",
       "type": "registry:ui",
       "target": "components/ui/avatar.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/badge.tsx",
+      "path": "../registry-files/task-management/components/ui/badge.tsx",
       "type": "registry:ui",
       "target": "components/ui/badge.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/button.tsx",
+      "path": "../registry-files/task-management/components/ui/button.tsx",
       "type": "registry:ui",
       "target": "components/ui/button.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/calendar.tsx",
+      "path": "../registry-files/task-management/components/ui/calendar.tsx",
       "type": "registry:ui",
       "target": "components/ui/calendar.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/card.tsx",
+      "path": "../registry-files/task-management/components/ui/card.tsx",
       "type": "registry:ui",
       "target": "components/ui/card.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/dropdown-menu.tsx",
+      "path": "../registry-files/task-management/components/ui/dropdown-menu.tsx",
       "type": "registry:ui",
       "target": "components/ui/dropdown-menu.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/input.tsx",
+      "path": "../registry-files/task-management/components/ui/input.tsx",
       "type": "registry:ui",
       "target": "components/ui/input.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/kbd.tsx",
+      "path": "../registry-files/task-management/components/ui/kbd.tsx",
       "type": "registry:ui",
       "target": "components/ui/kbd.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/popover.tsx",
+      "path": "../registry-files/task-management/components/ui/popover.tsx",
       "type": "registry:ui",
       "target": "components/ui/popover.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/separator.tsx",
+      "path": "../registry-files/task-management/components/ui/separator.tsx",
       "type": "registry:ui",
       "target": "components/ui/separator.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/sheet.tsx",
+      "path": "../registry-files/task-management/components/ui/sheet.tsx",
       "type": "registry:ui",
       "target": "components/ui/sheet.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/sidebar.tsx",
+      "path": "../registry-files/task-management/components/ui/sidebar.tsx",
       "type": "registry:ui",
       "target": "components/ui/sidebar.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/skeleton.tsx",
+      "path": "../registry-files/task-management/components/ui/skeleton.tsx",
       "type": "registry:ui",
       "target": "components/ui/skeleton.tsx"
     },
     {
-      "path": "../../../templates/task-management/components/ui/tooltip.tsx",
+      "path": "../registry-files/task-management/components/ui/tooltip.tsx",
       "type": "registry:ui",
       "target": "components/ui/tooltip.tsx"
     },
     {
-      "path": "../../../templates/task-management/store/tasks-store.ts",
+      "path": "../registry-files/task-management/store/tasks-store.ts",
       "type": "registry:lib",
       "target": "store/tasks-store.ts"
     },
     {
-      "path": "../../../templates/task-management/mock-data/tasks.ts",
+      "path": "../registry-files/task-management/mock-data/tasks.ts",
       "type": "registry:lib",
       "target": "mock-data/tasks.ts"
     },
     {
-      "path": "../../../templates/task-management/mock-data/labels.ts",
+      "path": "../registry-files/task-management/mock-data/labels.ts",
       "type": "registry:lib",
       "target": "mock-data/labels.ts"
     },
     {
-      "path": "../../../templates/task-management/mock-data/statuses.tsx",
+      "path": "../registry-files/task-management/mock-data/statuses.tsx",
       "type": "registry:lib",
       "target": "mock-data/statuses.tsx"
     },
     {
-      "path": "../../../templates/task-management/mock-data/users.ts",
+      "path": "../registry-files/task-management/mock-data/users.ts",
       "type": "registry:lib",
       "target": "mock-data/users.ts"
     },
     {
-      "path": "../../../templates/task-management/lib/status-utils.tsx",
+      "path": "../registry-files/task-management/lib/status-utils.tsx",
       "type": "registry:lib",
       "target": "lib/status-utils.tsx"
     },
     {
-      "path": "../../../templates/task-management/lib/utils.ts",
+      "path": "../registry-files/task-management/lib/utils.ts",
       "type": "registry:lib",
       "target": "lib/utils.ts"
     },
     {
-      "path": "../../../templates/task-management/hooks/use-mobile.ts",
+      "path": "../registry-files/task-management/hooks/use-mobile.ts",
       "type": "registry:hook",
       "target": "hooks/use-mobile.ts"
     }

@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "../../../templates/task-management/components/task/board/task-board.tsx",
+      "path": "../registry-files/task-management/components/task/board/task-board.tsx",
       "type": "registry:component",
       "target": "components/task-board.tsx"
     }
