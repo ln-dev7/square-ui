@@ -13,7 +13,8 @@
   "files": [
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/emails-header.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/emails-header.tsx"
     }
   ]
 }

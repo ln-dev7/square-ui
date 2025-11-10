@@ -4,7 +4,12 @@
   "type": "registry:component",
   "title": "Email Detail",
   "description": "Email detail view component with full email content display, navigation, and actions.",
-  "registryDependencies": ["button", "avatar", "dropdown-menu", "tooltip"],
+  "registryDependencies": [
+    "button",
+    "avatar",
+    "dropdown-menu",
+    "tooltip"
+  ],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-dropdown-menu",
@@ -16,7 +21,8 @@
   "files": [
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-detail.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/email-detail.tsx"
     }
   ]
 }

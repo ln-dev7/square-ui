@@ -5,11 +5,14 @@
   "title": "Task Board",
   "description": "Main task board component with drag and drop functionality for organizing tasks by status.",
   "registryDependencies": [],
-  "dependencies": ["zustand"],
+  "dependencies": [
+    "zustand"
+  ],
   "files": [
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/task-management/components/task/board/task-board.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/task-board.tsx"
     }
   ]
 }

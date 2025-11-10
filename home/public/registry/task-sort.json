@@ -5,11 +5,16 @@
   "title": "Task Sort",
   "description": "Sorting component for tasks with multiple sort options.",
   "registryDependencies": [],
-  "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react", "zustand"],
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu",
+    "lucide-react",
+    "zustand"
+  ],
   "files": [
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/task-management/components/task/header/task-sort.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/task-sort.tsx"
     }
   ]
 }

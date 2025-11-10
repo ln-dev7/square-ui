@@ -7,11 +7,16 @@
   "registryDependencies": [
     "avatar"
   ],
-  "dependencies": ["@radix-ui/react-avatar", "date-fns", "zustand"],
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "date-fns",
+    "zustand"
+  ],
   "files": [
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-list.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/email-list.tsx"
     }
   ]
 }
