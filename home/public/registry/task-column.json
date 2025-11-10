@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Column",
   "description": "Task column component for organizing tasks by status with progress indicators.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-dropdown-menu",
     "lucide-react",

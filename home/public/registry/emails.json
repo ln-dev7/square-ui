@@ -4,6 +4,15 @@
   "type": "registry:block",
   "title": "Emails Template",
   "description": "Modern email client interface with inbox, folders, and email details. Built with Next.js and shadcn/ui.",
+  "registryDependencies": [
+    "button",
+    "avatar",
+    "dropdown-menu",
+    "separator",
+    "sheet",
+    "drawer",
+    "tooltip"
+  ],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-dialog",

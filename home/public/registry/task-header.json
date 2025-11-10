@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Header",
   "description": "Header component for the task management interface with filters, sort, and actions.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-separator",

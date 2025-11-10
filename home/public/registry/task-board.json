@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Board",
   "description": "Main task board component with drag and drop functionality for organizing tasks by status.",
+  "registryDependencies": [],
   "dependencies": ["zustand"],
   "files": [
     {

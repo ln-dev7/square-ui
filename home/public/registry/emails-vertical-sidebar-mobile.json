@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Emails Vertical Sidebar Mobile",
   "description": "Mobile-optimized vertical sidebar for email interface.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-separator",
     "lucide-react"

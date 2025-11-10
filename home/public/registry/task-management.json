@@ -4,6 +4,22 @@
   "type": "registry:block",
   "title": "Task Management Template",
   "description": "Simple board interface for managing tasks. Built with Next.js and shadcn/ui.",
+  "registryDependencies": [
+    "button",
+    "avatar",
+    "badge",
+    "card",
+    "calendar",
+    "dropdown-menu",
+    "input",
+    "kbd",
+    "popover",
+    "separator",
+    "sheet",
+    "sidebar",
+    "skeleton",
+    "tooltip"
+  ],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-dialog",

@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Sidebar",
   "description": "Sidebar navigation for task management with projects and team sections.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-separator",

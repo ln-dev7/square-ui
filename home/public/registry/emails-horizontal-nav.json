@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Emails Horizontal Navigation",
   "description": "Horizontal navigation for email categories and filters.",
+  "registryDependencies": [],
   "dependencies": [
     "lucide-react"
   ],

@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Sort",
   "description": "Sorting component for tasks with multiple sort options.",
+  "registryDependencies": [],
   "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react", "zustand"],
   "files": [
     {

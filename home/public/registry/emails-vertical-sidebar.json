@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Emails Vertical Sidebar",
   "description": "Vertical sidebar navigation for desktop email interface with folders and labels.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-separator",
     "@radix-ui/react-tooltip",

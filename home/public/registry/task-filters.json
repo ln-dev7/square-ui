@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Filters",
   "description": "Filtering component for tasks with status, priority, assignee, and label filters.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-popover",
     "@radix-ui/react-separator",

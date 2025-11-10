@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Task Card",
   "description": "Individual task card component with priority, assignee, and labels.",
+  "registryDependencies": [],
   "dependencies": ["@radix-ui/react-avatar", "lucide-react", "zustand"],
   "files": [
     {

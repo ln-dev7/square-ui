@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Emails Header",
   "description": "Header component for the email interface with search and settings.",
+  "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-dropdown-menu",

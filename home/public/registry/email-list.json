@@ -4,6 +4,9 @@
   "type": "registry:component",
   "title": "Email List",
   "description": "Email list component displaying inbox messages with sender info and preview.",
+  "registryDependencies": [
+    "avatar"
+  ],
   "dependencies": ["@radix-ui/react-avatar", "date-fns", "zustand"],
   "files": [
     {

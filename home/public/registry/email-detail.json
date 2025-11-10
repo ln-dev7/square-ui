@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Email Detail",
   "description": "Email detail view component with full email content display, navigation, and actions.",
+  "registryDependencies": ["button", "avatar", "dropdown-menu", "tooltip"],
   "dependencies": [
     "@radix-ui/react-avatar",
     "@radix-ui/react-dropdown-menu",

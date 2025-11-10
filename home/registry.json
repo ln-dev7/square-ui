@@ -1,7 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "square-ui",
-  "homepage": "https://github.com/ln-dev7/square-ui",
+  "homepage": "https://square.lndev.me",
+  "author": "LN <https://github.com/ln-dev7>",
   "items": [
     {
       "name": "emails",
@@ -10,7 +11,7 @@
       "description": "Modern email client interface with inbox, folders, and email details. Built with Next.js and shadcn/ui.",
       "files": [
         {
-          "path": "emails/emails.json",
+          "path": "emails.json",
           "type": "registry:block"
         }
       ]
@@ -22,7 +23,7 @@
       "description": "Simple board interface for managing tasks. Built with Next.js and shadcn/ui.",
       "files": [
         {
-          "path": "task-management/task-management.json",
+          "path": "task-management.json",
           "type": "registry:block"
         }
       ]
@@ -34,7 +35,7 @@
       "description": "Email detail view component with full email content display.",
       "files": [
         {
-          "path": "emails/email-detail.json",
+          "path": "email-detail.json",
           "type": "registry:component"
         }
       ]
@@ -46,7 +47,7 @@
       "description": "Email list component displaying inbox messages.",
       "files": [
         {
-          "path": "emails/email-list.json",
+          "path": "email-list.json",
           "type": "registry:component"
         }
       ]
@@ -58,7 +59,7 @@
       "description": "Header component for the email interface.",
       "files": [
         {
-          "path": "emails/emails-header.json",
+          "path": "emails-header.json",
           "type": "registry:component"
         }
       ]
@@ -70,7 +71,7 @@
       "description": "Horizontal navigation for email categories.",
       "files": [
         {
-          "path": "emails/emails-horizontal-nav.json",
+          "path": "emails-horizontal-nav.json",
           "type": "registry:component"
         }
       ]
@@ -82,7 +83,7 @@
       "description": "Vertical sidebar navigation for desktop email interface.",
       "files": [
         {
-          "path": "emails/emails-vertical-sidebar.json",
+          "path": "emails-vertical-sidebar.json",
           "type": "registry:component"
         }
       ]
@@ -94,7 +95,7 @@
       "description": "Mobile-optimized vertical sidebar for email interface.",
       "files": [
         {
-          "path": "emails/emails-vertical-sidebar-mobile.json",
+          "path": "emails-vertical-sidebar-mobile.json",
           "type": "registry:component"
         }
       ]
@@ -106,7 +107,7 @@
       "description": "Main task board component with drag and drop functionality.",
       "files": [
         {
-          "path": "task-management/task-board.json",
+          "path": "task-board.json",
           "type": "registry:component"
         }
       ]
@@ -118,7 +119,7 @@
       "description": "Individual task card component.",
       "files": [
         {
-          "path": "task-management/task-card.json",
+          "path": "task-card.json",
           "type": "registry:component"
         }
       ]
@@ -130,7 +131,7 @@
       "description": "Task column component for organizing tasks by status.",
       "files": [
         {
-          "path": "task-management/task-column.json",
+          "path": "task-column.json",
           "type": "registry:component"
         }
       ]
@@ -142,7 +143,7 @@
       "description": "Header component for the task management interface.",
       "files": [
         {
-          "path": "task-management/task-header.json",
+          "path": "task-header.json",
           "type": "registry:component"
         }
       ]
@@ -154,7 +155,7 @@
       "description": "Sidebar navigation for task management.",
       "files": [
         {
-          "path": "task-management/task-sidebar.json",
+          "path": "task-sidebar.json",
           "type": "registry:component"
         }
       ]
@@ -166,7 +167,7 @@
       "description": "Filtering component for tasks.",
       "files": [
         {
-          "path": "task-management/task-filters.json",
+          "path": "task-filters.json",
           "type": "registry:component"
         }
       ]
@@ -178,7 +179,7 @@
       "description": "Sorting component for tasks.",
       "files": [
         {
-          "path": "task-management/task-sort.json",
+          "path": "task-sort.json",
           "type": "registry:component"
         }
       ]
