@@ -14,7 +14,8 @@
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-message.tsx",
       "type": "registry:component",
-      "target": "components/chat-message.tsx"
+      "target": "components/chat-message.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { Logo } from \"@/components/ui/logo\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\ninterface Message {\n  id: string;\n  content: string;\n  sender: \"user\" | \"ai\";\n  timestamp: Date;\n}\n\ninterface ChatMessageProps {\n  message: Message;\n}\n\nexport function ChatMessage({ message }: ChatMessageProps) {\n  return (\n    <div\n      className={cn(\n        \"flex gap-4\",\n        message.sender === \"user\" ? \"justify-end\" : \"justify-start\"\n      )}\n    >\n      {message.sender === \"ai\" && (\n        <div className=\"shrink-0\">\n          <div className=\"size-8 rounded-full bg-secondary flex items-center justify-center\">\n            <Logo className=\"size-6\" />\n          </div>\n        </div>\n      )}\n\n      <div\n        className={cn(\n          \"rounded-2xl px-4 py-3 max-w-[80%]\",\n          message.sender === \"user\"\n            ? \"bg-primary text-primary-foreground\"\n            : \"bg-secondary\"\n        )}\n      >\n        <p className=\"text-sm leading-relaxed\">{message.content}</p>\n      </div>\n\n      {message.sender === \"user\" && (\n        <div className=\"shrink-0\">\n          <Avatar className=\"size-8\">\n            <AvatarImage src=\"/ln.png\" alt=\"User\" />\n            <AvatarFallback>U</AvatarFallback>\n          </Avatar>\n        </div>\n      )}\n    </div>\n  );\n}\n\n"
     }
   ]
 }

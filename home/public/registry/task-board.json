@@ -12,7 +12,8 @@
     {
       "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/task-management/components/task/board/task-board.tsx",
       "type": "registry:component",
-      "target": "components/task-board.tsx"
+      "target": "components/task-board.tsx",
+      "content": "'use client';\n\nimport { useTasksStore } from '@/store/tasks-store';\nimport { statuses } from '@/mock-data/statuses';\nimport { TaskColumn } from './task-column';\n\nexport function TaskBoard() {\n   const { tasksByStatus } = useTasksStore();\n\n   return (\n     <div className=\"flex h-full gap-3 px-3 pt-4 pb-2 min-w-max overflow-hidden\">\n       {statuses.map((status) => (\n         <TaskColumn\n           key={status.id}\n           status={status}\n           tasks={tasksByStatus[status.id] || []}\n         />\n       ))}\n     </div>\n   );\n}\n\n"
     }
   ]
 }
