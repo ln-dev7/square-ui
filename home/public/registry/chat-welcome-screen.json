@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "../registry-files/chat/components/chat/chat-welcome-screen.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-welcome-screen.tsx",
       "type": "registry:component",
       "target": "components/chat-welcome-screen.tsx"
     }

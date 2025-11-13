@@ -15,7 +15,7 @@
   ],
   "files": [
     {
-      "path": "../registry-files/chat/components/chat/chat-input-box.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/chat/components/chat/chat-input-box.tsx",
       "type": "registry:component",
       "target": "components/chat-input-box.tsx"
     }

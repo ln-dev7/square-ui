@@ -20,7 +20,7 @@
   ],
   "files": [
     {
-      "path": "../registry-files/emails/components/emails/email-detail.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/emails/components/emails/email-detail.tsx",
       "type": "registry:component",
       "target": "components/email-detail.tsx"
     }

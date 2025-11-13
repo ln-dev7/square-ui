@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "../registry-files/task-management/components/task/sidebar/task-sidebar.tsx",
+      "path": "https://raw.githubusercontent.com/ln-dev7/square-ui/master/templates/task-management/components/task/sidebar/task-sidebar.tsx",
       "type": "registry:component",
       "target": "components/task-sidebar.tsx"
     }
