@@ -45,59 +45,43 @@ export function RecentDocuments() {
             return (
               <div
                 key={doc.id}
-                className="relative h-[46px] rounded-[10px] border border-border bg-sidebar hover:bg-sidebar-accent"
+                className="relative h-[46px] rounded-[10px] border border-border bg-sidebar hover:bg-sidebar-accent px-[7px]"
               >
-                <table className="w-full h-full border-collapse table-fixed">
-                  <colgroup>
-                    <col className="w-full sm:w-[50%] md:w-[40%]" />
-                    <col className="hidden sm:table-column md:w-[25%]" />
-                    <col className="hidden md:table-column md:w-[20%]" />
-                    <col className="hidden lg:table-column lg:w-[15%]" />
-                  </colgroup>
-                  <tbody>
-                    <tr className="h-full">
-                      <td className="px-[7px] py-0 align-middle text-left">
-                        <div className="flex items-center gap-2">
-                          <div className="flex size-8 items-center justify-center rounded-[6px] border border-border bg-background shrink-0">
-                            <Icon className="size-[18px] text-muted-foreground" />
-                          </div>
-                          <p className="text-[15px] font-normal text-foreground tracking-[-0.45px]">
-                            {doc.name}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="hidden sm:table-cell px-[7px] py-0 align-middle text-left">
-                        <div className="flex items-center gap-2">
-                          <Avatar className="size-[26px] shrink-0">
-                            <AvatarImage
-                              src={doc.authorAvatar}
-                              alt={doc.author}
-                            />
-                            <AvatarFallback>
-                              {doc.author.charAt(0).toUpperCase()}
-                            </AvatarFallback>
-                          </Avatar>
-                          <span className="text-[15px] font-normal text-foreground tracking-[-0.45px] whitespace-nowrap">
-                            {doc.author}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="hidden md:table-cell px-[7px] py-0 align-middle text-left">
-                        <div className="flex items-center gap-2">
-                          <Upload className="size-4 text-muted-foreground shrink-0" />
-                          <span className="text-[14px] font-normal text-muted-foreground tracking-[-0.42px] whitespace-nowrap">
-                            {doc.uploadedAt}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="hidden lg:table-cell px-[7px] py-0 align-middle text-left">
-                        <span className="text-[15px] font-normal text-muted-foreground tracking-[-0.45px] whitespace-nowrap">
-                          {doc.size}
-                        </span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="grid h-full items-center gap-2 sm:gap-3 md:gap-4 overflow-hidden grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(120px,auto)] md:grid-cols-[minmax(0,1fr)_minmax(140px,auto)_minmax(110px,auto)] lg:grid-cols-[minmax(0,1fr)_minmax(160px,auto)_minmax(130px,auto)_minmax(70px,auto)]">
+                  <div className="flex items-center gap-2 min-w-0 overflow-hidden">
+                    <div className="flex size-8 items-center justify-center rounded-[6px] border border-border bg-background shrink-0">
+                      <Icon className="size-[18px] text-muted-foreground" />
+                    </div>
+                    <p className="text-[15px] font-normal text-foreground tracking-[-0.45px] truncate min-w-0">
+                      {doc.name}
+                    </p>
+                  </div>
+
+                  <div className="hidden sm:flex items-center gap-2 min-w-0 overflow-hidden">
+                    <Avatar className="size-[26px] shrink-0">
+                      <AvatarImage src={doc.authorAvatar} alt={doc.author} />
+                      <AvatarFallback>
+                        {doc.author.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span className="text-[15px] font-normal text-foreground tracking-[-0.45px] whitespace-nowrap truncate min-w-0">
+                      {doc.author}
+                    </span>
+                  </div>
+
+                  <div className="hidden md:flex items-center gap-2 min-w-0 overflow-hidden">
+                    <Upload className="size-4 text-muted-foreground shrink-0" />
+                    <span className="text-[14px] font-normal text-muted-foreground tracking-[-0.42px] whitespace-nowrap truncate min-w-0">
+                      {doc.uploadedAt}
+                    </span>
+                  </div>
+
+                  <div className="hidden lg:flex items-center min-w-0 overflow-hidden">
+                    <span className="text-[15px] font-normal text-muted-foreground tracking-[-0.45px] whitespace-nowrap truncate min-w-0">
+                      {doc.size}
+                    </span>
+                  </div>
+                </div>
               </div>
             );
           })}
