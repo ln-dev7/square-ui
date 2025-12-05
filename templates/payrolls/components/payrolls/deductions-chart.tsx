@@ -146,8 +146,8 @@ export function DeductionsChart() {
         </div>
       </div>
 
-      <div className="flex items-end justify-between">
-        <div className="space-y-6">
+      <div className="flex flex-col min-[520px]:flex-row min-[520px]:items-end min-[520px]:justify-between lg:flex-col lg:items-stretch xl:flex-row xl:items-end xl:justify-between gap-4">
+        <div className="space-y-4 min-[520px]:space-y-6">
           <p className="text-3xl font-semibold tracking-tight">
             ${summary.total.toLocaleString()}
           </p>
@@ -168,7 +168,7 @@ export function DeductionsChart() {
           </div>
         </div>
 
-        <div className="w-[280px] h-[100px]">
+        <div className="w-full min-[520px]:w-[280px] lg:w-full xl:w-[280px] h-[100px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} barGap={2}>
               <defs>

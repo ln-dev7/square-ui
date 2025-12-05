@@ -49,7 +49,7 @@ export function PayrollsHeader() {
   const setShowFilters = useLayoutStore((state) => state.setShowFilters);
 
   return (
-    <header className="flex items-center justify-between w-full border-b border-border px-4 md:px-6 py-4 bg-card">
+    <header className="flex items-center justify-between w-full border-b border-border px-4 md:px-6 py-2.5 bg-card">
       <div className="flex items-center gap-3">
         <Button
           variant="ghost"
