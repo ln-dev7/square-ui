@@ -37,7 +37,7 @@ export function StatsCards() {
   return (
     <div className="pt-4 sm:pt-6 px-4 sm:px-6 flex items-center justify-center w-full">
       <div className="rounded-xl border border-border p-4 sm:p-6 w-full">
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatCard
             icon={<IconNotes className="size-[18px] text-muted-foreground" />}
             title="Tasks Due Today"
