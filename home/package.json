@@ -22,7 +22,7 @@
     "mdast-util-to-string": "^4.0.0",
     "mdx-annotations": "^0.1.4",
     "motion": "^10.17.0",
-    "next": "^14.2.35",
+    "next": "^14.2.26",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "eslint": "^8.56.0",
-    "eslint-config-next": "^16.0.10",
+    "eslint-config-next": "^14.0.4",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "0.33.1"
