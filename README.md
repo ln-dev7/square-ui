@@ -2,6 +2,8 @@
 
 Collection of beautifully crafted open-source layouts UI built with Next.js and shadcn/ui.
 
+> **Note:** Templates using Radix UI are located in `templates/`, while templates using Base UI are in `templates-baseui/`.
+
 | Template              | Description                                                                                                      | Live Demo                                                   | GitHub                                                                                 | Design                                   |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------- |
 | **CRM Dashboard**     | Modern CRM dashboard with revenue charts, lead sources, deals table with pagination, and filters.                | [View Demo](https://square-ui-dashboard-2.vercel.app)       | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/dashboard-2)       | [Rico](https://x.com/_heyrico)           |
