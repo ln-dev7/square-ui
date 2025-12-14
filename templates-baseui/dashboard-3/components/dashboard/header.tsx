@@ -91,12 +91,14 @@ export function DashboardHeader() {
       </Link>
 
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="hidden sm:flex gap-2">
-            <HugeiconsIcon icon={SidebarLeft01Icon} className="size-4" />
-            Edit Layout
-          </Button>
-        </DropdownMenuTrigger>
+        <DropdownMenuTrigger
+          render={
+            <Button variant="outline" size="sm" className="hidden sm:flex gap-2">
+              <HugeiconsIcon icon={SidebarLeft01Icon} className="size-4" />
+              Edit Layout
+            </Button>
+          }
+        />
         <DropdownMenuContent align="end" className="w-56">
           <DropdownMenuGroup>
             <p className="text-muted-foreground px-2 py-1.5 text-xs font-medium">
