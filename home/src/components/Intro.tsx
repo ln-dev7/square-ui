@@ -48,7 +48,7 @@ export function Intro() {
         Open-source layouts <br />
         by{' '}
         <Link
-          href="https://ecaefmew.mychariow.shop/prd_3cu1s0"
+          href="https://ui.lndev.me"
           target="_blank"
           className="text-sky-300"
         >
