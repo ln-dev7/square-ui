@@ -41,7 +41,7 @@ export function DashboardHeader() {
 
       <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
         <Link
-          href="https://github.com/ln-dev7/square-ui"
+          href="https://github.com/ln-dev7/square-ui/tree/master/templates/dashboard-2"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -77,7 +77,7 @@ export function DashboardHeader() {
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link
-              href="https://github.com/ln-dev7/square-ui"
+              href="https://github.com/ln-dev7/square-ui/tree/master/templates/dashboard-2"
               target="_blank"
               rel="noopener noreferrer"
             >
