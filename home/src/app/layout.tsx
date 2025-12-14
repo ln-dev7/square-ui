@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import clsx from 'clsx'
 
 import { Providers } from '@/app/providers'
+import Garlands from '@/components/Garlands'
 
 import '@/styles/tailwind.css'
 
@@ -73,6 +74,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
         <Providers>{children}</Providers>
+        <Garlands />
       </body>
     </html>
   )
