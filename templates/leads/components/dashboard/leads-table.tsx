@@ -180,7 +180,7 @@ export function LeadsTable() {
                     setStatusFilter(value as LeadStatus | "all")
                   }
                 >
-                  <SelectTrigger className="h-8">
+                  <SelectTrigger className="h-8 w-full">
                     <SelectValue placeholder="All Status" />
                   </SelectTrigger>
                   <SelectContent>
@@ -203,7 +203,7 @@ export function LeadsTable() {
                     setSourceFilter(value as LeadSource | "all")
                   }
                 >
-                  <SelectTrigger className="h-8">
+                  <SelectTrigger className="h-8 w-full">
                     <SelectValue placeholder="All Sources" />
                   </SelectTrigger>
                   <SelectContent>
@@ -221,7 +221,7 @@ export function LeadsTable() {
                   Owner
                 </p>
                 <Select value={ownerFilter} onValueChange={setOwnerFilter}>
-                  <SelectTrigger className="h-8">
+                  <SelectTrigger className="h-8 w-full">
                     <SelectValue placeholder="All Owners" />
                   </SelectTrigger>
                   <SelectContent>

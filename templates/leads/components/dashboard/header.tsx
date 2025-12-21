@@ -193,36 +193,6 @@ export function DashboardHeader() {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="h-9 px-3 gap-2">
-              <UserPlus />
-              <span>Invite</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuLabel>Invite to workspace</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <Mail className="size-4 mr-2" />
-              Invite by email
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link2 className="size-4 mr-2" />
-              Copy invite link
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <Users className="size-4 mr-2" />
-              Manage team members
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Settings className="size-4 mr-2" />
-              Invite settings
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
 
       <ThemeToggle />
@@ -250,7 +220,7 @@ export function DashboardHeader() {
             <MoreVertical className="size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent className="w-40" align="end">
           <DropdownMenuItem>
             <Search className="size-4 mr-2" />
             Search
@@ -262,10 +232,6 @@ export function DashboardHeader() {
           <DropdownMenuItem>
             <MessageSquare className="size-4 mr-2" />
             Messages
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <UserPlus className="size-4 mr-2" />
-            Invite
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link
