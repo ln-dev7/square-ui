@@ -37,7 +37,6 @@ import {
   Share2,
   Trash2,
   Settings,
-  HelpCircle,
   ChevronDown,
   Plus,
   ChevronsUpDown,
@@ -215,38 +214,19 @@ export function FilesSidebar({
             ))}
           </div>
         </div>
-
-        <SidebarGroup className="mt-4">
-          <SidebarGroupContent>
-            <Button variant="outline" className="w-full" asChild>
-              <Link
-                href="https://square.lndev.me"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Globe className="size-4" />
-                square.lndev.me
-              </Link>
-            </Button>
-          </SidebarGroupContent>
-        </SidebarGroup>
       </SidebarContent>
 
       <SidebarFooter className="p-4">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton className="h-8 text-sm text-muted-foreground">
-              <Settings className="size-4" />
-              <span>Settings</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton className="h-8 text-sm text-muted-foreground">
-              <HelpCircle className="size-4" />
-              <span>Help Center</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+        <Button variant="outline" className="w-full" asChild>
+          <Link
+            href="https://square.lndev.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Globe className="size-4" />
+            square.lndev.me
+          </Link>
+        </Button>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

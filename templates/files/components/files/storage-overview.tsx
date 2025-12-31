@@ -15,13 +15,17 @@ export function StorageOverview() {
       </div>
 
       <div className="relative h-3 rounded-full bg-muted overflow-hidden mb-3">
-        <div className="absolute inset-0 flex">
-          {storageData.breakdown.map((item) => {
+        <div className="absolute inset-0 flex rounded-full overflow-hidden">
+          {storageData.breakdown.map((item, index) => {
             const width = (item.size / storageData.used) * usedPercentage;
+            const isFirst = index === 0;
+            const isLast = index === storageData.breakdown.length - 1;
             return (
               <div
                 key={item.type}
-                className="h-full"
+                className={`h-full ${isFirst ? "rounded-l-full" : ""} ${
+                  isLast ? "rounded-r-full" : ""
+                }`}
                 style={{
                   width: `${width}%`,
                   backgroundColor: item.color,
