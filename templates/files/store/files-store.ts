@@ -1,5 +1,10 @@
 import { create } from "zustand";
-import { files as initialFiles, folders as initialFolders, FileItem, Folder } from "@/mock-data/files";
+import {
+  files as initialFiles,
+  folders as initialFolders,
+  FileItem,
+  Folder,
+} from "@/mock-data/files";
 
 type ViewMode = "grid" | "list";
 
@@ -22,10 +27,10 @@ export const useFilesStore = create<FilesStore>((set, get) => ({
   files: initialFiles,
   folders: initialFolders,
   searchQuery: "",
-  viewMode: "grid",
+  viewMode: "list",
 
   setSearchQuery: (query) => set({ searchQuery: query }),
-  
+
   setViewMode: (mode) => set({ viewMode: mode }),
 
   toggleStarred: (fileId) =>
@@ -69,4 +74,3 @@ export const useFilesStore = create<FilesStore>((set, get) => ({
     return files.filter((file) => file.folderId === folderId);
   },
 }));
-

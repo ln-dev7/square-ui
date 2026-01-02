@@ -22,7 +22,7 @@ export const useFilesStore = create<FilesStore>((set, get) => ({
   files: initialFiles,
   folders: initialFolders,
   searchQuery: "",
-  viewMode: "grid",
+  viewMode: "list",
 
   setSearchQuery: (query) => set({ searchQuery: query }),
   
