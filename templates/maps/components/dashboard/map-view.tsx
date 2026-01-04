@@ -316,6 +316,11 @@ export function MapView() {
             isHoveringPopupRef.current = false;
             closePopup();
           });
+          popupElement.addEventListener("click", () => {
+            selectLocation(location.id);
+            popup.remove();
+            popupRef.current = null;
+          });
         }
 
         popupRef.current = popup;

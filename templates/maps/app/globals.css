@@ -153,6 +153,7 @@
   min-width: 320px;
   max-width: 360px;
   z-index: 1000;
+  cursor: pointer!important;
 }
 
 .location-popup .popup-header {
