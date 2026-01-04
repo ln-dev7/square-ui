@@ -91,9 +91,7 @@ export function LocationsSidebar({
                 <MapPin className="size-4" />
               </div>
               <div className="flex items-center gap-1 group-data-[collapsible=icon]:hidden">
-                <span className="text-sm font-medium">
-                  Square UI - Maps
-                </span>
+                <span className="text-sm font-medium">Square UI - Maps</span>
                 <ChevronsUpDown className="size-3 text-muted-foreground" />
               </div>
             </button>
@@ -192,7 +190,7 @@ export function LocationsSidebar({
 
       <SidebarFooter className="px-2.5 pb-3">
         <div className="group-data-[collapsible=icon]:hidden space-y-3">
-          <div className="text-center text-[11px] text-muted-foreground">
+          <p className="text-center text-[11px] text-muted-foreground">
             Map powered by{" "}
             <Link
               href="https://mapcn.vercel.app/"
@@ -211,7 +209,27 @@ export function LocationsSidebar({
             >
               @sainianmol16
             </Link>
-          </div>
+          </p>
+          <p className="text-center text-[11px] text-muted-foreground">
+            Map powered by{" "}
+            <Link
+              href="https://mapcn.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground transition-colors"
+            >
+              mapcn
+            </Link>{" "}
+            by{" "}
+            <Link
+              href="https://x.com/sainianmol16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground transition-colors"
+            >
+              @sainianmol16
+            </Link>
+          </p>
           <div className="group/sidebar relative flex flex-col gap-2 rounded-lg border p-4 text-sm w-full bg-background">
             <div className="text-balance text-lg font-semibold leading-tight group-hover/sidebar:underline">
               Open-source layouts by lndev-ui

@@ -173,7 +173,7 @@ export function MapControls() {
           asChild
         >
           <Link
-            href="https://github.com/ln-dev7/square-ui"
+            href="https://github.com/ln-dev7/square-ui/tree/master/templates/maps"
             target="_blank"
             rel="noopener noreferrer"
           >
