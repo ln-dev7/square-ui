@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { startOfWeek, addDays, eachDayOfInterval, isSameDay } from "date-fns";
+import { startOfWeek, addDays, eachDayOfInterval, startOfDay } from "date-fns";
 import { Search, Triangle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -27,17 +27,29 @@ export function ProjectsTimeline() {
 
   const currentWeek = useMemo(() => {
     const weekStart = startOfWeek(currentWeekStart, { weekStartsOn: 1 });
-    return eachDayOfInterval({
+    const days = eachDayOfInterval({
       start: weekStart,
       end: addDays(weekStart, 6),
     });
+    // Normalize all days to start of day for consistent comparison
+    return days.map(day => startOfDay(day));
   }, [currentWeekStart]);
 
-  const today = new Date();
-  const todayIndex = currentWeek.findIndex((day) => isSameDay(day, today));
+  const today = startOfDay(new Date());
+  const todayIndex = currentWeek.findIndex((day) => {
+    const normalizedDay = startOfDay(day);
+    return normalizedDay.getTime() === today.getTime();
+  });
+
+  // Debug: log today indicator info
+  console.log('Today indicator:', {
+    today: today.toISOString().split('T')[0],
+    todayIndex,
+    currentWeek: currentWeek.map(d => d.toISOString().split('T')[0]),
+    isInWeek: todayIndex !== -1
+  });
 
   const projects = filteredProjects();
-  const columnWidth = 162;
   const cardHeight = 108;
   const gapBetweenCards = 30;
   const horizontalPadding = 20;
@@ -57,26 +69,49 @@ export function ProjectsTimeline() {
     const projectsWithPositions: ProjectInfo[] = [];
 
     projects.forEach((project) => {
-      const startDate = new Date(project.startDate);
-      const endDate = new Date(project.endDate);
+      // Normalize dates to start of day to ensure accurate comparison
+      // Handle both Date objects and date strings (from serialization)
+      const rawStartDate = project.startDate instanceof Date 
+        ? project.startDate 
+        : new Date(project.startDate);
+      const rawEndDate = project.endDate instanceof Date 
+        ? project.endDate 
+        : new Date(project.endDate);
+      
+      const startDate = startOfDay(rawStartDate);
+      const endDate = startOfDay(rawEndDate);
 
-      const startIndex = currentWeek.findIndex((day) =>
-        isSameDay(day, startDate)
-      );
-      const endIndex = currentWeek.findIndex((day) => isSameDay(day, endDate));
+      // Compare dates by date string (YYYY-MM-DD) to avoid timezone issues
+      const startDateStr = startDate.toISOString().split('T')[0];
+      const endDateStr = endDate.toISOString().split('T')[0];
+      
+      const startIndex = currentWeek.findIndex((day) => {
+        const dayStr = startOfDay(day).toISOString().split('T')[0];
+        return dayStr === startDateStr;
+      });
+      const endIndex = currentWeek.findIndex((day) => {
+        const dayStr = startOfDay(day).toISOString().split('T')[0];
+        return dayStr === endDateStr;
+      });
 
+      // Check if project overlaps with the current week at all
+      const weekStart = startOfDay(currentWeek[0]);
+      const weekEnd = startOfDay(currentWeek[currentWeek.length - 1]);
+      const projectOverlapsWeek = startDate <= weekEnd && endDate >= weekStart;
+
+      if (!projectOverlapsWeek) {
+        // Project doesn't overlap with this week at all, skip it
+        return;
+      }
+
+      // If both dates are outside the week but it overlaps, it spans the full week
       if (startIndex === -1 && endIndex === -1) {
-        const startBeforeWeek = startDate < currentWeek[0];
-        const endAfterWeek = endDate > currentWeek[currentWeek.length - 1];
-
-        if (startBeforeWeek && endAfterWeek) {
-          projectsWithPositions.push({
-            project,
-            startIndex: 0,
-            endIndex: currentWeek.length - 1,
-            spanDays: currentWeek.length,
-          });
-        }
+        projectsWithPositions.push({
+          project,
+          startIndex: 0,
+          endIndex: currentWeek.length - 1,
+          spanDays: currentWeek.length,
+        });
         return;
       }
 
@@ -84,6 +119,24 @@ export function ProjectsTimeline() {
       const actualEndIndex =
         endIndex === -1 ? currentWeek.length - 1 : endIndex;
       const spanDays = actualEndIndex - actualStartIndex + 1;
+
+      // Debug logging for all projects
+      console.log(`Project: ${project.title}`, {
+        rawStart: project.startDate,
+        rawEnd: project.endDate,
+        normalizedStart: startDate.toISOString().split('T')[0],
+        normalizedEnd: endDate.toISOString().split('T')[0],
+        startIndex,
+        endIndex,
+        actualStartIndex,
+        actualEndIndex,
+        spanDays,
+        startCol: actualStartIndex + 1,
+        endCol: actualEndIndex + 2,
+        gridColumn: `${actualStartIndex + 1} / ${actualEndIndex + 2}`,
+        weekDays: currentWeek.map(d => d.toISOString().split('T')[0]),
+        weekDayIndices: currentWeek.map((d, i) => ({ index: i, date: d.toISOString().split('T')[0] }))
+      });
 
       projectsWithPositions.push({
         project,
@@ -190,7 +243,7 @@ export function ProjectsTimeline() {
                 <div
                   className="absolute z-20 pointer-events-none"
                   style={{
-                    left: `${todayIndex * columnWidth + columnWidth / 2}px`,
+                    left: `${((todayIndex + 0.5) / 7) * 100}%`,
                     top: 0,
                     bottom: 0,
                     transform: "translateX(-50%)",
@@ -210,9 +263,8 @@ export function ProjectsTimeline() {
               )}
 
               <div
-                className="grid w-full flex-1"
+                className="grid grid-cols-7 flex-1 w-full"
                 style={{
-                  gridTemplateColumns: `repeat(7, ${columnWidth}px)`,
                   gridAutoRows: `${cardHeight}px`,
                   gap: `${gapBetweenCards}px 0`,
                 }}

@@ -8,11 +8,11 @@ interface TimelineWeekHeaderProps {
 
 export function TimelineWeekHeader({ weekDays }: TimelineWeekHeaderProps) {
   return (
-    <div className="flex border-b border-border sticky top-0 z-30 bg-background w-max min-w-full">
+    <div className="grid grid-cols-7 border-b border-border sticky top-0 z-30 bg-background w-full">
       {weekDays.map((day) => (
         <div
           key={day.toISOString()}
-          className="flex-1 border-r border-border last:border-r-0 text-center py-2.5 min-w-[162px]"
+          className="border-r border-border last:border-r-0 text-center py-2.5"
         >
           <div className="text-sm font-medium">
             {format(day, "EEE dd")}
