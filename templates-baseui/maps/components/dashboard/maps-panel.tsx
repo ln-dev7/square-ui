@@ -121,6 +121,8 @@ export function MapsPanel({ mode = "all" }: MapsPanelProps) {
     setRouteDestination,
     setUserLocation,
     clearRoute,
+    isPanelVisible,
+    setPanelVisible,
   } = useMapsStore();
 
   const getDistance = React.useCallback(
@@ -291,8 +293,21 @@ export function MapsPanel({ mode = "all" }: MapsPanelProps) {
     return allTags.find((t) => t.id === tagId)?.name || tagId;
   };
 
+  if (!isPanelVisible) {
+    return (
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute left-4 top-4 z-20 sm:hidden size-10 bg-background! shadow-xl"
+        onClick={() => setPanelVisible(true)}
+      >
+        <HugeiconsIcon icon={Location01Icon} className="size-5" />
+      </Button>
+    );
+  }
+
   return (
-    <div className="absolute left-4 top-4 bottom-4 z-10 flex flex-col bg-background rounded-xl shadow-xl border overflow-hidden w-80 sm:w-[400px]">
+    <div className="absolute left-4 top-4 bottom-4 z-20 flex flex-col bg-background rounded-xl shadow-xl border overflow-hidden w-80 sm:w-[400px]">
       <div className="p-3 border-b flex items-center justify-between">
         <div className="">
           <h2 className="font-semibold flex items-center gap-2">
@@ -305,7 +320,17 @@ export function MapsPanel({ mode = "all" }: MapsPanelProps) {
             {config.getSubtitle(locations.length)}
           </p>
         </div>
-        <SidebarTrigger className="size-7" />
+        <div className="flex items-center gap-1">
+          <SidebarTrigger className="size-7" />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-7 sm:hidden"
+            onClick={() => setPanelVisible(false)}
+          >
+            <HugeiconsIcon icon={Cancel01Icon} className="size-4" />
+          </Button>
+        </div>
       </div>
 
       <div className="p-2 border-b">

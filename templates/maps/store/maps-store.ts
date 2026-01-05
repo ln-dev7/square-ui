@@ -37,6 +37,7 @@ interface MapsState {
   mapStyle: MapStyle;
   userLocation: { lat: number; lng: number } | null;
   routeDestinationId: string | null;
+  isPanelVisible: boolean;
   setSelectedCategory: (categoryId: string) => void;
   toggleTag: (tagId: string) => void;
   clearTags: () => void;
@@ -51,6 +52,7 @@ interface MapsState {
   setUserLocation: (location: { lat: number; lng: number } | null) => void;
   setRouteDestination: (locationId: string | null) => void;
   clearRoute: () => void;
+  setPanelVisible: (visible: boolean) => void;
   resetSelectionIfNotInList: (locations: Location[]) => void;
   getFilteredLocations: () => Location[];
   getFavoriteLocations: () => Location[];
@@ -70,6 +72,7 @@ export const useMapsStore = create<MapsState>((set, get) => ({
   mapStyle: "default",
   userLocation: null,
   routeDestinationId: null,
+  isPanelVisible: true,
 
   setSelectedCategory: (categoryId) => {
     const state = get();
@@ -123,6 +126,8 @@ export const useMapsStore = create<MapsState>((set, get) => ({
   setRouteDestination: (locationId) => set({ routeDestinationId: locationId }),
 
   clearRoute: () => set({ routeDestinationId: null }),
+
+  setPanelVisible: (visible) => set({ isPanelVisible: visible }),
 
   resetSelectionIfNotInList: (locations) => {
     const state = get();
