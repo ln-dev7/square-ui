@@ -19,6 +19,7 @@ import {
 } from "@/mock-data/locations";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "usehooks-ts";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Location01Icon,
@@ -124,6 +125,14 @@ export function MapsPanel({ mode = "all" }: MapsPanelProps) {
     isPanelVisible,
     setPanelVisible,
   } = useMapsStore();
+
+  const isDesktop = useMediaQuery("(min-width: 640px)");
+
+  React.useEffect(() => {
+    if (isDesktop && !isPanelVisible) {
+      setPanelVisible(true);
+    }
+  }, [isDesktop, isPanelVisible, setPanelVisible]);
 
   const getDistance = React.useCallback(
     (location: Location) => {
