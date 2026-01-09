@@ -27,6 +27,26 @@ function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function ArrowUpRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M7 7h10v10" />
+      <path d="M7 17 17 7" />
+    </svg>
+  )
+}
+
 export function Intro() {
   return (
     <>
@@ -35,7 +55,7 @@ export function Intro() {
           <Image
             src="/icon.svg"
             alt="Logo"
-            className="w-7 rotate-[0deg] overflow-hidden rounded-lg sm:w-9"
+            className="w-7 rotate-0 overflow-hidden rounded-lg sm:w-9"
             width={28}
             height={28}
           />
@@ -48,11 +68,12 @@ export function Intro() {
         Open-source layouts <br />
         by{' '}
         <Link
-          href="https://ui.lndev.me"
+          href="https://ecaefmew.mychariow.shop/prd_ygw8j6"
           target="_blank"
-          className="text-sky-300"
+          className="text-sky-300 relative hover:underline hover:underline-offset-4"
         >
           lndev-ui
+          <ArrowUpRightIcon className="size-5 absolute top-0 -right-5" />
         </Link>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
