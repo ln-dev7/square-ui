@@ -87,7 +87,7 @@ export function Intro() {
           icon={BookIcon}
           className="flex-none"
         >
-          Sponsor
+          Become a sponsor
         </IconLink>
         <IconLink
           href="https://github.com/ln-dev7/square-ui"
