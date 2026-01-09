@@ -2,6 +2,16 @@
 
 Collection of beautifully crafted open-source layouts UI built with Next.js and shadcn/ui.
 
+## Sponsors
+
+This project is sponsored by:
+
+- <a href="https://ui.lndev.me/" target="_blank">lndev/ui</a> : Fine components coded by lndev.
+
+[Become a sponsor](https://ecaefmew.mychariow.shop/prd_3cu1s0)
+
+## Templates
+
 > **Note:** Templates using Radix UI are located in `templates/`, while templates using Base UI are in `templates-baseui/`.
 
 | Template              | Description                                                                                                      | Live Demo                                                   | GitHub (Radix UI)                                                                      | GitHub (Base UI)                                                                        | Design                                   |
