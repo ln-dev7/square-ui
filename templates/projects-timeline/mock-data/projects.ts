@@ -136,10 +136,123 @@ function generateProjectsForDateRange(
   return allProjects;
 }
 
-const startDate = new Date(2020, 0, 1);
-const endDate = new Date(2070, 11, 31);
+// Create a fixed dataset for debugging
+// Get the current week (Monday to Sunday)
+function getCurrentWeekStart(): Date {
+  const today = new Date();
+  const day = today.getDay();
+  const diff = today.getDate() - day + (day === 0 ? -6 : 1); // Adjust to Monday
+  const monday = new Date(today.setDate(diff));
+  monday.setHours(0, 0, 0, 0);
+  return monday;
+}
 
-export const projects: Project[] = generateProjectsForDateRange(
-  startDate,
-  endDate
-);
+function createFixedProjects(): Project[] {
+  const weekStart = getCurrentWeekStart();
+  
+  // Create dates for the current week (Monday = day 0, Sunday = day 6)
+  const monday = new Date(weekStart);
+  monday.setHours(0, 0, 0, 0);
+  
+  const tuesday = new Date(monday);
+  tuesday.setDate(tuesday.getDate() + 1);
+  
+  const wednesday = new Date(monday);
+  wednesday.setDate(wednesday.getDate() + 2);
+  
+  const thursday = new Date(monday);
+  thursday.setDate(thursday.getDate() + 3);
+  
+  const friday = new Date(monday);
+  friday.setDate(friday.getDate() + 4);
+  
+  const saturday = new Date(monday);
+  saturday.setDate(saturday.getDate() + 5);
+  
+  const sunday = new Date(monday);
+  sunday.setDate(sunday.getDate() + 6);
+
+  return [
+    {
+      id: "proj-1",
+      title: "Frontend Optimization",
+      startDate: monday, // Mon
+      endDate: saturday, // Sat (6 days: Mon-Sat)
+      priority: "high",
+      status: "in-progress",
+      assignedUsers: ["user1", "user2", "user3"],
+      color: "blue",
+    },
+    {
+      id: "proj-2",
+      title: "Network Security",
+      startDate: tuesday, // Tue
+      endDate: thursday, // Thu (3 days: Tue-Thu)
+      priority: "medium",
+      status: "in-progress",
+      assignedUsers: ["user4", "user5"],
+      color: "red",
+    },
+    {
+      id: "proj-3",
+      title: "Database Migration",
+      startDate: wednesday, // Wed
+      endDate: friday, // Fri (3 days: Wed-Fri)
+      priority: "high",
+      status: "in-progress",
+      assignedUsers: ["user1", "user6"],
+      color: "purple",
+    },
+    {
+      id: "proj-4",
+      title: "API Integration",
+      startDate: monday, // Mon
+      endDate: wednesday, // Wed (3 days: Mon-Wed)
+      priority: "low",
+      status: "in-progress",
+      assignedUsers: ["user2", "user3", "user4"],
+      color: "green",
+    },
+    {
+      id: "proj-5",
+      title: "UI Design",
+      startDate: thursday, // Thu
+      endDate: sunday, // Sun (4 days: Thu-Sun)
+      priority: "medium",
+      status: "in-progress",
+      assignedUsers: ["user5", "user6"],
+      color: "orange",
+    },
+    {
+      id: "proj-6",
+      title: "Bug Fixes",
+      startDate: friday, // Fri
+      endDate: saturday, // Sat (2 days: Fri-Sat)
+      priority: "high",
+      status: "in-progress",
+      assignedUsers: ["user1"],
+      color: "yellow",
+    },
+    {
+      id: "proj-7",
+      title: "Code Review",
+      startDate: monday, // Mon
+      endDate: sunday, // Sun (7 days: full week)
+      priority: "low",
+      status: "in-progress",
+      assignedUsers: ["user2", "user3", "user4", "user5"],
+      color: "cyan",
+    },
+  ];
+}
+
+// Use fixed dataset for consistent debugging
+export const projects: Project[] = createFixedProjects();
+
+// Uncomment below to use random data instead:
+// const startDate = new Date(2020, 0, 1);
+// const endDate = new Date(2070, 11, 31);
+// export const projects: Project[] = generateProjectsForDateRange(
+//   startDate,
+//   endDate
+// );
