@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import { Providers } from '@/app/providers'
 import Garlands from '@/components/Garlands'
+import { Analytics } from "@vercel/analytics/next"
 
 import '@/styles/tailwind.css'
 
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
         <Providers>{children}</Providers>
         <Garlands />
+        <Analytics />
       </body>
     </html>
   )

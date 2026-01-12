@@ -17,6 +17,7 @@
     "@types/node": "^20.10.8",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "@vercel/analytics": "^1.6.1",
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.0",
     "mdast-util-to-string": "^4.0.0",
