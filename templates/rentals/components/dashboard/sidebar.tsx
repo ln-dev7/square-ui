@@ -22,6 +22,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Slider } from "@/components/ui/slider";
 import {
   Home,
   Heart,
@@ -45,7 +46,14 @@ const navItems = [
   { id: "favorites", title: "Favorites", icon: Heart, href: "/favorites" },
 ];
 
-const propertyTypes: PropertyType[] = ["apartment", "house", "villa", "studio", "loft", "cottage"];
+const propertyTypes: PropertyType[] = [
+  "apartment",
+  "house",
+  "villa",
+  "studio",
+  "loft",
+  "cottage",
+];
 
 export function RentalsSidebar({
   ...props
@@ -180,17 +188,24 @@ export function RentalsSidebar({
           <SidebarGroupContent>
             <div className="px-2 space-y-4">
               <div>
-                <p className="text-xs font-medium mb-2 text-sidebar-foreground">Property type</p>
+                <p className="text-xs font-medium mb-2 text-sidebar-foreground">
+                  Property type
+                </p>
                 <div className="flex flex-wrap gap-1.5">
                   {propertyTypes.map((type) => (
                     <Button
                       key={type}
-                      variant={selectedPropertyTypes.includes(type) ? "default" : "outline"}
+                      variant={
+                        selectedPropertyTypes.includes(type)
+                          ? "default"
+                          : "outline"
+                      }
                       size="sm"
                       onClick={() => togglePropertyType(type)}
                       className={cn(
                         "h-7 text-xs px-2",
-                        selectedPropertyTypes.includes(type) && "bg-primary text-primary-foreground"
+                        selectedPropertyTypes.includes(type) &&
+                          "bg-primary text-primary-foreground"
                       )}
                     >
                       {propertyTypeLabels[type]}
@@ -202,19 +217,29 @@ export function RentalsSidebar({
               <Separator />
 
               <div>
-                <p className="text-xs font-medium mb-2 text-sidebar-foreground">Price range</p>
+                <p className="text-xs font-medium mb-2 text-sidebar-foreground">
+                  Price range
+                </p>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-muted-foreground w-12">${priceRange[0]}</span>
-                    <input
-                      type="range"
-                      min="0"
-                      max="500"
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-                      className="flex-1 h-1"
+                  <div className="px-2">
+                    <Slider
+                      value={[priceRange[0], priceRange[1]]}
+                      onValueChange={(value) =>
+                        setPriceRange([value[0], value[1]])
+                      }
+                      min={0}
+                      max={500}
+                      step={10}
+                      className="w-full"
                     />
-                    <span className="text-xs text-muted-foreground w-12 text-right">${priceRange[1]}</span>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-xs text-muted-foreground">
+                        ${priceRange[0]}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        ${priceRange[1]}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -222,20 +247,32 @@ export function RentalsSidebar({
               <Separator />
 
               <div>
-                <p className="text-xs font-medium mb-2 text-sidebar-foreground">Rooms</p>
+                <p className="text-xs font-medium mb-2 text-sidebar-foreground">
+                  Rooms
+                </p>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-sidebar-foreground">Bedrooms</span>
+                    <span className="text-xs text-sidebar-foreground">
+                      Bedrooms
+                    </span>
                     <div className="flex items-center gap-1">
                       <Button
                         variant="ghost"
                         size="icon"
                         className="h-6 w-6"
-                        onClick={() => setBedrooms(bedrooms !== null && bedrooms > 0 ? bedrooms - 1 : null)}
+                        onClick={() =>
+                          setBedrooms(
+                            bedrooms !== null && bedrooms > 0
+                              ? bedrooms - 1
+                              : null
+                          )
+                        }
                       >
                         <Minus className="h-3 w-3" />
                       </Button>
-                      <span className="w-6 text-center text-xs">{bedrooms ?? "Any"}</span>
+                      <span className="w-6 text-center text-xs">
+                        {bedrooms ?? "Any"}
+                      </span>
                       <Button
                         variant="ghost"
                         size="icon"
@@ -247,17 +284,27 @@ export function RentalsSidebar({
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-sidebar-foreground">Bathrooms</span>
+                    <span className="text-xs text-sidebar-foreground">
+                      Bathrooms
+                    </span>
                     <div className="flex items-center gap-1">
                       <Button
                         variant="ghost"
                         size="icon"
                         className="h-6 w-6"
-                        onClick={() => setBathrooms(bathrooms !== null && bathrooms > 0 ? bathrooms - 1 : null)}
+                        onClick={() =>
+                          setBathrooms(
+                            bathrooms !== null && bathrooms > 0
+                              ? bathrooms - 1
+                              : null
+                          )
+                        }
                       >
                         <Minus className="h-3 w-3" />
                       </Button>
-                      <span className="w-6 text-center text-xs">{bathrooms ?? "Any"}</span>
+                      <span className="w-6 text-center text-xs">
+                        {bathrooms ?? "Any"}
+                      </span>
                       <Button
                         variant="ghost"
                         size="icon"
