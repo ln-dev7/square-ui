@@ -41,8 +41,12 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "glob": "^10.5.0",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "0.33.1"
+  },
+  "overrides": {
+    "glob": "^10.5.0"
   }
 }
