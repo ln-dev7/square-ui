@@ -26,6 +26,9 @@ importers:
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
+      diff:
+        specifier: ^8.0.3
+        version: 8.0.3
       next:
         specifier: 16.0.10
         version: 16.0.10(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1290,8 +1293,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  diff@8.0.2:
-    resolution: {integrity: sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==}
+  diff@8.0.3:
+    resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
     engines: {node: '>=0.3.1'}
 
   doctrine@2.1.0:
@@ -4209,7 +4212,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  diff@8.0.2: {}
+  diff@8.0.3: {}
 
   doctrine@2.1.0:
     dependencies:
@@ -5697,7 +5700,7 @@ snapshots:
       cosmiconfig: 9.0.0(typescript@5.9.3)
       dedent: 1.7.1
       deepmerge: 4.3.1
-      diff: 8.0.2
+      diff: 8.0.3
       execa: 9.6.1
       fast-glob: 3.3.3
       fs-extra: 11.3.3
