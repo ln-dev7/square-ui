@@ -13,6 +13,8 @@ type SortBy =
   | "reviews"
   | "nearest";
 
+type MapStyle = "default" | "streets" | "outdoors" | "satellite";
+
 interface RentalsState {
   listings: Listing[];
   searchQuery: string;
@@ -27,6 +29,7 @@ interface RentalsState {
   selectedListingId: string | null;
   mapCenter: { lat: number; lng: number };
   mapZoom: number;
+  mapStyle: MapStyle;
   userLocation: { lat: number; lng: number } | null;
   setSearchQuery: (query: string) => void;
   togglePropertyType: (type: PropertyType) => void;
@@ -41,6 +44,7 @@ interface RentalsState {
   selectListing: (listingId: string | null) => void;
   setMapCenter: (center: { lat: number; lng: number }) => void;
   setMapZoom: (zoom: number) => void;
+  setMapStyle: (style: MapStyle) => void;
   setUserLocation: (location: { lat: number; lng: number } | null) => void;
   getFilteredListings: () => Listing[];
   getFavoriteListings: () => Listing[];
@@ -82,6 +86,7 @@ export const useRentalsStore = create<RentalsState>((set, get) => ({
   selectedListingId: null,
   mapCenter: { lat: 48.8566, lng: 2.3522 },
   mapZoom: 10,
+  mapStyle: "default",
   userLocation: null,
 
   setSearchQuery: (query) => set({ searchQuery: query }),
@@ -126,6 +131,8 @@ export const useRentalsStore = create<RentalsState>((set, get) => ({
   setMapCenter: (center) => set({ mapCenter: center }),
 
   setMapZoom: (zoom) => set({ mapZoom: zoom }),
+
+  setMapStyle: (style) => set({ mapStyle: style }),
 
   setUserLocation: (location) => set({ userLocation: location }),
 

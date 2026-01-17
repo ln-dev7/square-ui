@@ -10,6 +10,9 @@ import { propertyTypeLabels } from "@/mock-data/listings";
 const MAP_STYLES = {
   light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
   dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  streets: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+  outdoors: "https://tiles.stadiamaps.com/styles/outdoors.json",
+  satellite: "https://tiles.stadiamaps.com/styles/alidade_satellite.json",
 };
 
 export function MapView() {
@@ -23,6 +26,7 @@ export function MapView() {
   const {
     mapCenter,
     mapZoom,
+    mapStyle,
     setMapCenter,
     setMapZoom,
     selectListing,
@@ -33,8 +37,11 @@ export function MapView() {
   const listings = getFilteredListings();
 
   const getMapStyleUrl = React.useCallback(() => {
-    return resolvedTheme === "dark" ? MAP_STYLES.dark : MAP_STYLES.light;
-  }, [resolvedTheme]);
+    if (mapStyle === "default") {
+      return resolvedTheme === "dark" ? MAP_STYLES.dark : MAP_STYLES.light;
+    }
+    return MAP_STYLES[mapStyle];
+  }, [mapStyle, resolvedTheme]);
 
   React.useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -96,7 +103,7 @@ export function MapView() {
   React.useEffect(() => {
     if (!mapRef.current) return;
     mapRef.current.setStyle(getMapStyleUrl());
-  }, [getMapStyleUrl]);
+  }, [mapStyle, resolvedTheme, getMapStyleUrl]);
 
   React.useEffect(() => {
     if (!mapRef.current) return;
