@@ -6,6 +6,8 @@ Collection of beautifully crafted open-source layouts UI built with Next.js and 
 
 This project is sponsored by:
 
+- <a href="https://pro.lndev.me/" target="_blank">Square UI Pro</a> : Premium UI templates that accelerate your development.
+
 - <a href="https://ui.lndev.me/" target="_blank">lndev/ui</a> : Fine components coded by lndev.
 
 [Become a sponsor](https://ecaefmew.mychariow.shop/prd_3cu1s0)
