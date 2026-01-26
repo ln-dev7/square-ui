@@ -49,20 +49,42 @@ function ContentWrapper({
   )
 }
 
-function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
+function ArticleHeader({ id, date, protemplate }: { id: string; date: string | Date; protemplate?: boolean }) {
   return (
     <header className="relative mb-10 xl:mb-0">
       <div className="pointer-events-none absolute top-0 left-[max(-0.5rem,calc(50%-18.625rem))] z-50 flex h-4 items-center justify-end gap-x-2 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:left-0 lg:min-w-[32rem] xl:h-8">
-        <Link href={`#${id}`} className="inline-flex">
-          <FormattedDate
-            date={date}
-            className="hidden xl:pointer-events-auto xl:block xl:text-2xs/4 xl:font-medium xl:text-white/50"
-          />
-        </Link>
+        <div className="inline-flex items-center gap-2">
+          {protemplate && (
+            <Link 
+              href="https://pro.lndev.me/pricing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden xl:pointer-events-auto xl:inline-flex xl:items-center xl:rounded-full xl:border xl:border-white/20 xl:bg-white/10 xl:px-2 xl:py-0.5 xl:text-2xs/4 xl:font-medium xl:text-white/80 xl:backdrop-blur-sm xl:hover:bg-white/20 xl:transition-colors"
+            >
+              PRO
+            </Link>
+          )}
+          <Link href={`#${id}`} className="inline-flex">
+            <FormattedDate
+              date={date}
+              className="hidden xl:pointer-events-auto xl:block xl:text-2xs/4 xl:font-medium xl:text-white/50"
+            />
+          </Link>
+        </div>
         <div className="h-[0.0625rem] w-3.5 bg-gray-400 lg:-mr-3.5 xl:mr-0 xl:bg-gray-300" />
       </div>
       <ContentWrapper>
-        <div className="flex">
+        <div className="flex items-center gap-2">
+          {protemplate && (
+            <Link 
+              href="https://pro.lndev.me/pricing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-2xs/4 font-medium text-gray-700 xl:hidden hover:bg-gray-200 transition-colors dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+            >
+              Pro
+            </Link>
+          )}
           <Link href={`#${id}`} className="inline-flex">
             <FormattedDate
               date={date}
@@ -78,10 +100,12 @@ function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
 export const article = function Article({
   id,
   date,
+  protemplate,
   children,
 }: {
   id: string
   date: string | Date
+  protemplate?: boolean
   children: React.ReactNode
 }) {
   let heightRef = useRef<React.ElementRef<'div'>>(null)
@@ -115,7 +139,7 @@ export const article = function Article({
       style={{ paddingBottom: `${heightAdjustment}px` }}
     >
       <div ref={heightRef}>
-        <ArticleHeader id={id} date={date} />
+        <ArticleHeader id={id} date={date} protemplate={protemplate} />
         <ContentWrapper className="typography" data-mdx-content>
           {children}
         </ContentWrapper>
