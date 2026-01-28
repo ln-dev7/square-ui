@@ -29,7 +29,7 @@
     "lodash": ">=4.17.23",
     "recharts": "2.15.4",
     "tailwind-merge": "^3.4.0",
-    "zustand": "^5.0.8"
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
