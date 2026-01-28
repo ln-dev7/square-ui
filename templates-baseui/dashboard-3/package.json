@@ -22,6 +22,7 @@
     "qs": "^6.14.1",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "lodash": ">=4.17.23",
     "recharts": "^2.15.4",
     "shadcn": "^3.6.1",
     "tailwind-merge": "^3.4.0",
