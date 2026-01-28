@@ -1,0 +1,289 @@
+version: 2
+updates:
+  # Templates Radix UI (templates/)
+  - package-ecosystem: "npm"
+    directory: "/templates/bookmarks"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "bookmarks"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/calendar"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "calendar"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/chat"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "chat"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/dashboard-1"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "dashboard-1"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/dashboard-2"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "dashboard-2"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/dashboard-3"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "dashboard-3"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/dashboard-4"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "dashboard-4"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/emails"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "emails"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/employees"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "employees"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/files"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "files"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/leads"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "leads"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/maps"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "maps"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/payrolls"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "payrolls"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/projects-timeline"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "projects-timeline"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/rentals"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "rentals"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/task-management"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "task-management"
+
+  - package-ecosystem: "npm"
+    directory: "/templates/tasks"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates"
+      - "tasks"
+
+  # Templates Base UI (templates-baseui/)
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/bookmarks"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "bookmarks"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/calendar"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "calendar"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/dashboard-3"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "dashboard-3"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/dashboard-4"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "dashboard-4"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/emails"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "emails"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/files"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "files"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/leads"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "leads"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/maps"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "maps"
+
+  - package-ecosystem: "npm"
+    directory: "/templates-baseui/rentals"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "templates-baseui"
+      - "rentals"
