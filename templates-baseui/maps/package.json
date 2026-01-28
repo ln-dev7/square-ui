@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
-    "@hugeicons/core-free-icons": "^2.0.0",
+    "@hugeicons/core-free-icons": "^3.1.1",
     "@hugeicons/react": "^1.1.1",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",

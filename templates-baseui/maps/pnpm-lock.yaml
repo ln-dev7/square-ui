@@ -12,8 +12,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@hugeicons/core-free-icons':
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^3.1.1
+        version: 3.1.1
       '@hugeicons/react':
         specifier: ^1.1.1
         version: 1.1.4(react@19.2.1)
@@ -239,8 +239,8 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
-  '@hugeicons/core-free-icons@2.0.0':
-    resolution: {integrity: sha512-OSfv5k0iB0yG61dcfK7jcf00AIK8EXyQOgtcNJzSBFvm88n9VOelkxihZHJnNwDUFpO/jZI3vZSVp6i1dmRvJQ==}
+  '@hugeicons/core-free-icons@3.1.1':
+    resolution: {integrity: sha512-UpS2lUQFi5sKyJSWwM6rO+BnPLvVz1gsyCpPHeZyVuZqi89YH8ksliza4cwaODqKOZyeXmG8juo1ty4QtQofkg==}
 
   '@hugeicons/react@1.1.4':
     resolution: {integrity: sha512-gsc3eZyd2fGqRUThW9+lfjxxsOkz6KNVmRXRgJjP32GL0OnnLJnl3hytKt47CBbiQj2xE2kCw+rnP3UQCThcKw==}
@@ -2367,7 +2367,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@hugeicons/core-free-icons@2.0.0': {}
+  '@hugeicons/core-free-icons@3.1.1': {}
 
   '@hugeicons/react@1.1.4(react@19.2.1)':
     dependencies:
