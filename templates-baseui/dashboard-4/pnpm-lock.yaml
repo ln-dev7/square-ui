@@ -12,14 +12,14 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@hugeicons/core-free-icons':
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^3.1.1
+        version: 3.1.1
       '@hugeicons/react':
         specifier: ^1.1.1
         version: 1.1.4(react@19.2.1)
       '@modelcontextprotocol/sdk':
         specifier: ^1.25.2
-        version: 1.25.2(hono@4.11.7)(zod@3.25.76)
+        version: 1.25.2(hono@4.11.7)(zod@4.2.1)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -333,8 +333,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hugeicons/core-free-icons@2.0.0':
-    resolution: {integrity: sha512-OSfv5k0iB0yG61dcfK7jcf00AIK8EXyQOgtcNJzSBFvm88n9VOelkxihZHJnNwDUFpO/jZI3vZSVp6i1dmRvJQ==}
+  '@hugeicons/core-free-icons@3.1.1':
+    resolution: {integrity: sha512-UpS2lUQFi5sKyJSWwM6rO+BnPLvVz1gsyCpPHeZyVuZqi89YH8ksliza4cwaODqKOZyeXmG8juo1ty4QtQofkg==}
 
   '@hugeicons/react@1.1.4':
     resolution: {integrity: sha512-gsc3eZyd2fGqRUThW9+lfjxxsOkz6KNVmRXRgJjP32GL0OnnLJnl3hytKt47CBbiQj2xE2kCw+rnP3UQCThcKw==}
@@ -3450,7 +3450,7 @@ snapshots:
     dependencies:
       hono: 4.11.7
 
-  '@hugeicons/core-free-icons@2.0.0': {}
+  '@hugeicons/core-free-icons@3.1.1': {}
 
   '@hugeicons/react@1.1.4(react@19.2.1)':
     dependencies:
@@ -3635,6 +3635,28 @@ snapshots:
       raw-body: 3.0.2
       zod: 3.25.76
       zod-to-json-schema: 3.25.0(zod@3.25.76)
+    transitivePeerDependencies:
+      - hono
+      - supports-color
+
+  '@modelcontextprotocol/sdk@1.25.2(hono@4.11.7)(zod@4.2.1)':
+    dependencies:
+      '@hono/node-server': 1.19.7(hono@4.11.7)
+      ajv: 8.17.1
+      ajv-formats: 3.0.1(ajv@8.17.1)
+      content-type: 1.0.5
+      cors: 2.8.5
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.0.6
+      express: 5.2.1
+      express-rate-limit: 7.5.1(express@5.2.1)
+      jose: 6.1.3
+      json-schema-typed: 8.0.2
+      pkce-challenge: 5.0.1
+      raw-body: 3.0.2
+      zod: 4.2.1
+      zod-to-json-schema: 3.25.0(zod@4.2.1)
     transitivePeerDependencies:
       - hono
       - supports-color
@@ -6412,6 +6434,10 @@ snapshots:
   zod-to-json-schema@3.25.0(zod@3.25.76):
     dependencies:
       zod: 3.25.76
+
+  zod-to-json-schema@3.25.0(zod@4.2.1):
+    dependencies:
+      zod: 4.2.1
 
   zod-validation-error@4.0.2(zod@4.2.1):
     dependencies:
