@@ -26,7 +26,7 @@
     "next": "16.1.5",
     "next-themes": "^0.4.4",
     "react": "19.2.3",
-    "react-day-picker": "^9.11.1",
+    "react-day-picker": "^9.13.0",
     "react-dom": "19.2.3",
     "lodash": ">=4.17.23",
     "recharts": "^2.15.0",
