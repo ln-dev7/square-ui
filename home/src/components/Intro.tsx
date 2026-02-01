@@ -104,7 +104,7 @@ export function Intro() {
           target="_blank"
           className="relative isolate inline-flex items-center justify-center gap-2 rounded-full border border-amber-500/80 bg-amber-400 px-4 py-2 text-sm font-semibold text-amber-950 shadow transition-colors before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-amber-400 before:shadow after:absolute after:inset-0 after:-z-10 after:rounded-full hover:after:bg-white/25"
         >
-          <span>Square UI Pro : Get Early Access Now • $69</span>
+          <span>Square UI Pro : Get Full Access • $159</span>
           <ArrowUpRightIcon className="size-4" />
         </Link>
       </div>
