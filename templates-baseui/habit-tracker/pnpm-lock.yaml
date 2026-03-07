@@ -30,7 +30,7 @@ importers:
         specifier: ^8.0.3
         version: 8.0.3
       hono:
-        specifier: ^4.11.4
+        specifier: '>=4.12.4'
         version: 4.12.5
       js-yaml:
         specifier: ^4.1.1
