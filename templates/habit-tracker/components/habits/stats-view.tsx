@@ -211,7 +211,7 @@ export function StatsView() {
           </AddHabitDialog>
         </div>
       ) : (
-        <Tabs defaultValue={habits[0]?.id ?? ""} className="space-y-0">
+        <Tabs defaultValue={habits[0]?.id ?? ""} className="gap-0 flex flex-col">
           <div className="mb-5">
             <h2 className="text-sm font-bold mb-3">Per habit</h2>
             <TabsList className="h-auto gap-1 bg-transparent p-0 flex-nowrap w-full overflow-x-auto justify-start pb-1 scrollbar-none">
