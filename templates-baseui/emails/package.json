@@ -12,6 +12,7 @@
     "@base-ui/react": "^1.0.0",
     "@modelcontextprotocol/sdk": "^1.25.2",
     "@tabler/icons-react": "^3.35.0",
+    "ajv": ">=6.14.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
