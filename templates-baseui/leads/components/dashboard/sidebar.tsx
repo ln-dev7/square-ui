@@ -214,13 +214,13 @@ export function DashboardSidebar({
         </SidebarMenu>
 
         <Link
-          href="https://square.lndev.me"
+          href="https://square.lndevui.com"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 h-9 px-4 rounded-md border border-border bg-background hover:bg-muted shadow-xs text-sm font-medium w-full mt-2"
         >
           <HugeiconsIcon icon={Globe02Icon} className="size-4" />
-          square.lndev.me
+          square.lndevui.com
         </Link>
 
         <DropdownMenu>

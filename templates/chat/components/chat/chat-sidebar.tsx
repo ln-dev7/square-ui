@@ -331,13 +331,13 @@ export function ChatSidebar() {
             asChild
           >
             <Link
-              href="https://square.lndev.me"
+              href="https://square.lndevui.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(205,175,250,1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(129,169,248,1),transparent_50%),radial-gradient(ellipse_at_top_left,rgba(247,203,191,1),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(164,252,245,1),transparent_50%)]" />
               <span className="relative z-10 font-medium text-xs">
-                square.lndev.me
+                square.lndevui.com
               </span>
             </Link>
           </Button>

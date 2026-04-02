@@ -57,7 +57,7 @@ export function CalendarSidebar({
       <SidebarHeader className="pb-0">
         <div className="px-2 py-1.5">
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             className="flex items-center justify-between mb-4"
           >
@@ -253,12 +253,12 @@ export function CalendarSidebar({
 
       <SidebarFooter className="p-4">
         <Link
-          href="https://square.lndev.me"
+          href="https://square.lndevui.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Button className="w-full">
-            square.lndev.me
+            square.lndevui.com
             <HugeiconsIcon icon={ArrowUpRight01Icon} className="size-4" />
           </Button>
         </Link>

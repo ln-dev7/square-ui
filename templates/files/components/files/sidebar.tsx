@@ -219,12 +219,12 @@ export function FilesSidebar({
       <SidebarFooter className="p-4">
         <Button variant="outline" className="w-full" asChild>
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Globe className="size-4" />
-            square.lndev.me
+            square.lndevui.com
           </Link>
         </Button>
 

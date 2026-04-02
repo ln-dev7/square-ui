@@ -225,12 +225,12 @@ export function DashboardSidebar({
 
         <Button variant="outline" className="w-full mt-2" asChild>
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Globe className="size-4" />
-            square.lndev.me
+            square.lndevui.com
           </Link>
         </Button>
 

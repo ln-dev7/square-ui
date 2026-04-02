@@ -229,17 +229,17 @@ export function LocationsSidebar({
               target="_blank"
               rel="noreferrer"
               className="absolute inset-0"
-              href="https://square.lndev.me"
+              href="https://square.lndevui.com"
             >
               <span className="sr-only">Square by lndev-ui</span>
             </Link>
             <Button size="sm" className="w-full" asChild>
               <Link
-                href="https://square.lndev.me"
+                href="https://square.lndevui.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                square.lndev.me
+                square.lndevui.com
               </Link>
             </Button>
           </div>

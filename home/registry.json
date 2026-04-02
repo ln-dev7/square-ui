@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "square-ui",
-  "homepage": "https://square.lndev.me",
+  "homepage": "https://square.lndevui.com",
   "author": "LN <https://github.com/ln-dev7>",
   "items": [
     {

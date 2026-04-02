@@ -137,12 +137,12 @@ export function TasksSidebar() {
 
         <Button variant="outline" className="mt-2" asChild>
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <IconGlobeFilled className="size-4" />
-            square.lndev.me
+            square.lndevui.com
           </Link>
         </Button>
       </SidebarFooter>

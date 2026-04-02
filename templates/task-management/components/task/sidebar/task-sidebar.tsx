@@ -222,10 +222,10 @@ export function TaskSidebar({
           className="w-full justify-between px-3 py-2 h-auto text-sm shadow-none"
           asChild
         >
-          <Link href="https://square.lndev.me" target="_blank">
+          <Link href="https://square.lndevui.com" target="_blank">
             <div className="flex items-center gap-3">
               <HelpCircle className="size-4" />
-              <span>square.lndev.me</span>
+              <span>square.lndevui.com</span>
             </div>
             <ArrowUpRight className="size-4" />
           </Link>

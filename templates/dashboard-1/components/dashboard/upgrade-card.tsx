@@ -22,8 +22,8 @@ export function UpgradeCard() {
           className="h-7 w-full justify-center gap-1.5 text-xs"
           asChild
         >
-          <Link href="https://square.lndev.me" target="_blank" rel="noopener noreferrer">
-            square.lndev.me
+          <Link href="https://square.lndevui.com" target="_blank" rel="noopener noreferrer">
+            square.lndevui.com
             <ArrowRight className="size-3.5" />
           </Link>
         </Button>

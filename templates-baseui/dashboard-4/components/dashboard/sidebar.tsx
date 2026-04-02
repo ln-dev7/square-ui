@@ -274,17 +274,17 @@ export function DashboardSidebar({
             target="_blank"
             rel="noreferrer"
             className="absolute inset-0"
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
           >
             <span className="sr-only">Square by lndev-ui</span>
           </Link>
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-8 w-full px-2.5 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
           >
-            square.lndev.me
+            square.lndevui.com
           </Link>
         </div>
       </SidebarFooter>

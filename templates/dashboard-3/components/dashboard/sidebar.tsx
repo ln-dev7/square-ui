@@ -256,13 +256,13 @@ export function DashboardSidebar({
 
       <SidebarFooter className="px-5 pb-5">
         <Link
-          href="https://square.lndev.me"
+          href="https://square.lndevui.com"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 h-9 px-4 rounded-md border border-border bg-background hover:bg-muted shadow-xs text-sm font-medium w-full"
         >
           <Globe className="size-4" />
-          square.lndev.me
+          square.lndevui.com
         </Link>
       </SidebarFooter>
     </Sidebar>

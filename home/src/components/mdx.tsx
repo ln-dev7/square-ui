@@ -56,7 +56,7 @@ function ArticleHeader({ id, date, protemplate }: { id: string; date: string | D
         <div className="inline-flex items-center gap-2">
           {protemplate && (
             <Link 
-              href="https://pro.lndev.me/pricing" 
+              href="https://pro.lndevui.com/pricing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden xl:pointer-events-auto xl:inline-flex xl:items-center xl:rounded-full xl:border xl:border-white/20 xl:bg-white/10 xl:px-2 xl:py-0.5 xl:text-2xs/4 xl:font-medium xl:text-white/80 xl:backdrop-blur-sm xl:hover:bg-white/20 xl:transition-colors"
@@ -77,7 +77,7 @@ function ArticleHeader({ id, date, protemplate }: { id: string; date: string | D
         <div className="flex items-center gap-2">
           {protemplate && (
             <Link 
-              href="https://pro.lndev.me/pricing" 
+              href="https://pro.lndevui.com/pricing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-2xs/4 font-medium text-gray-700 xl:hidden hover:bg-gray-200 transition-colors dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"

@@ -160,17 +160,17 @@ export function DashboardSidebar(
             target="_blank"
             rel="noreferrer"
             className="absolute inset-0"
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
           >
             <span className="sr-only">Square by lndev-ui</span>
           </Link>
           <Link
-            href="https://square.lndev.me"
+            href="https://square.lndevui.com"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(buttonVariants({ size: "sm" }), "w-full")}
           >
-            square.lndev.me
+            square.lndevui.com
           </Link>
         </div>
       </SidebarFooter>

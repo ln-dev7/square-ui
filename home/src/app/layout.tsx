@@ -22,7 +22,7 @@ const monaSans = localFont({
   weight: '200 900',
 })
 
-const siteUrl = 'https://square.lndev.me'
+const siteUrl = 'https://square.lndevui.com'
 
 export const metadata: Metadata = {
   title: {
