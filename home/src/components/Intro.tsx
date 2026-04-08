@@ -68,7 +68,7 @@ export function Intro() {
         Open-source layouts <br />
         by{' '}
         <Link
-          href="https://ecaefmew.mychariow.shop/prd_ygw8j6"
+          href="https://ecaefmew.mychariow.shop/prd_ue2xab"
           target="_blank"
           className="text-sky-300 relative hover:underline hover:underline-offset-4"
         >
@@ -82,12 +82,11 @@ export function Intro() {
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink
-          href="https://ecaefmew.mychariow.shop/prd_3cu1s0"
-          target="_blank"
+          href="/license"
           icon={BookIcon}
           className="flex-none"
         >
-          Become a sponsor
+          License
         </IconLink>
         <IconLink
           href="https://github.com/ln-dev7/square-ui"
