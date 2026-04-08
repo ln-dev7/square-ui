@@ -1,9 +1,26 @@
-MIT License
+ln-dev UI License
 
-Copyright (c) 2025 lndev-ui | Square UI 
+Copyright (c) 2026 lndev
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is granted to any individual or company that has obtained a valid copy of this software (the "Components" and "Templates") to use them in personal and commercial projects.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+You are allowed to:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* Use the Components and Templates to build unlimited personal or commercial projects
+* Modify the Components and Templates to create derivative works
+* Use them in SaaS applications, websites, or client projects
+* Sell end products that are built using these Components and Templates
+
+You are NOT allowed to:
+
+* Redistribute, share, or publish the Components or Templates (or any derivatives) as standalone resources
+* Create or distribute a UI kit, component library, template collection, or design system based on these Components or Templates
+* Make the Components or Templates available in any repository, marketplace, or website (free or paid)
+* Create a product whose primary purpose is to allow others to build using these Components or Templates
+* Use the Components or Templates in a way that competes with ln-dev UI or Square UI
+
+An "End Product" is defined as a final application, website, or software where the Components or Templates are integrated and not the primary value being redistributed.
+
+All rights not explicitly granted are reserved.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
