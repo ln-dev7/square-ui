@@ -6,6 +6,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { FormattedDate } from '@/components/FormattedDate'
+import { useTemplateFilter } from '@/components/TemplateFilter'
 
 export function a(props: React.ComponentPropsWithoutRef<typeof Link>) {
   return <Link {...props} target="_blank" rel="noopener noreferrer" />
@@ -110,6 +111,7 @@ export const article = function Article({
 }) {
   let heightRef = useRef<React.ElementRef<'div'>>(null)
   let [heightAdjustment, setHeightAdjustment] = useState(0)
+  let { filter } = useTemplateFilter()
 
   useEffect(() => {
     if (!heightRef.current) {
@@ -131,6 +133,15 @@ export const article = function Article({
       observer.disconnect()
     }
   }, [])
+
+  let isVisible =
+    filter === 'all' ||
+    (filter === 'premium' && protemplate) ||
+    (filter === 'free' && !protemplate)
+
+  if (!isVisible) {
+    return null
+  }
 
   return (
     <article
