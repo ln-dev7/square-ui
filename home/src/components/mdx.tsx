@@ -111,7 +111,12 @@ export const article = function Article({
 }) {
   let heightRef = useRef<React.ElementRef<'div'>>(null)
   let [heightAdjustment, setHeightAdjustment] = useState(0)
-  let { filter } = useTemplateFilter()
+  let { filter, registerTemplate, unregisterTemplate } = useTemplateFilter()
+
+  useEffect(() => {
+    registerTemplate(id, !!protemplate)
+    return () => unregisterTemplate(id)
+  }, [id, protemplate, registerTemplate, unregisterTemplate])
 
   useEffect(() => {
     if (!heightRef.current) {
