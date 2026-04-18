@@ -68,7 +68,7 @@ export function Intro() {
         Open-source layouts <br />
         by{' '}
         <Link
-          href="https://ecaefmew.mychariow.shop/prd_ue2xab"
+          href="https://lndev.mychariow.shop/prd_ue2xab"
           target="_blank"
           className="text-sky-300 relative hover:underline hover:underline-offset-4"
         >

@@ -10,7 +10,7 @@ This project is sponsored by:
 
 - <a href="https://ui.lndev.me/" target="_blank">lndev/ui</a> : Fine components coded by lndev.
 
-[Become a sponsor](https://ecaefmew.mychariow.shop/prd_3cu1s0)
+[Become a sponsor](https://lndev.mychariow.shop/prd_3cu1s0)
 
 ## Templates
 
