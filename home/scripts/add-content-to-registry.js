@@ -13,8 +13,7 @@ const forceUpdate = args.includes('--force') || args.includes('-f');
 const verbose = args.includes('--verbose') || args.includes('-v');
 const dryRun = args.includes('--dry-run') || args.includes('-d');
 
-// Afficher l'aide
-if (showHelp) {
+function printHelp() {
   console.log(`
 📚 Script d'ajout de contenu au registry
 
@@ -47,7 +46,6 @@ EXEMPLES:
   # Combinaison d'options
   node add-content-to-registry.js --dry-run --verbose
 `);
-  process.exit(0);
 }
 
 // Statistiques
@@ -85,12 +83,19 @@ function validateJSON(filePath, content) {
 /**
  * Convertit une URL GitHub en chemin local
  */
-function githubUrlToLocalPath(githubUrl) {
+function githubUrlToLocalPath(githubUrl, baseTemplatesDir = templatesDir) {
   if (!githubUrl.startsWith(GITHUB_BASE_URL)) {
     return null;
   }
   const relativePath = githubUrl.replace(GITHUB_BASE_URL, '');
-  return path.join(templatesDir, relativePath);
+  const templatesRoot = path.resolve(baseTemplatesDir);
+  const localPath = path.resolve(templatesRoot, relativePath);
+
+  if (localPath !== templatesRoot && !localPath.startsWith(templatesRoot + path.sep)) {
+    return null;
+  }
+
+  return localPath;
 }
 
 /**
@@ -303,50 +308,60 @@ function printSummary() {
   }
 }
 
-// ============================================
-// EXECUTION PRINCIPALE
-// ============================================
+function main() {
+  if (showHelp) {
+    printHelp();
+    process.exit(0);
+  }
 
-console.log('🚀 Script d\'ajout de contenu au registry\n');
-console.log('Options:');
-if (dryRun) console.log('  🔍 Mode DRY RUN (simulation)');
-if (forceUpdate) console.log('  🔄 Force la mise à jour même si content existe');
-if (verbose) console.log('  📝 Mode verbeux activé');
-console.log('');
+  console.log('🚀 Script d\'ajout de contenu au registry\n');
+  console.log('Options:');
+  if (dryRun) console.log('  🔍 Mode DRY RUN (simulation)');
+  if (forceUpdate) console.log('  🔄 Force la mise à jour même si content existe');
+  if (verbose) console.log('  📝 Mode verbeux activé');
+  console.log('');
 
-// Vérifier que les répertoires existent
-if (!fs.existsSync(registryDir)) {
-  console.error(`❌ Erreur: Le répertoire ${registryDir} n'existe pas`);
-  process.exit(1);
+  // Vérifier que les répertoires existent
+  if (!fs.existsSync(registryDir)) {
+    console.error(`❌ Erreur: Le répertoire ${registryDir} n'existe pas`);
+    process.exit(1);
+  }
+
+  if (!fs.existsSync(templatesDir)) {
+    console.error(`❌ Erreur: Le répertoire ${templatesDir} n'existe pas`);
+    process.exit(1);
+  }
+
+  // Lire tous les fichiers JSON
+  const jsonFiles = fs.readdirSync(registryDir)
+    .filter(f => f.endsWith('.json'))
+    .sort();
+
+  if (jsonFiles.length === 0) {
+    console.log('⚠️  Aucun fichier JSON trouvé dans le répertoire registry');
+    process.exit(0);
+  }
+
+  console.log(`📂 ${jsonFiles.length} fichier${jsonFiles.length > 1 ? 's' : ''} JSON trouvé${jsonFiles.length > 1 ? 's' : ''}\n`);
+
+  // Traiter chaque fichier
+  jsonFiles.forEach(jsonFile => {
+    processJSONFile(jsonFile);
+  });
+
+  // Afficher le résumé
+  printSummary();
+
+  // Code de sortie
+  if (stats.jsonFiles.errors > 0 || stats.contentFiles.errors > 0) {
+    process.exit(1);
+  }
 }
 
-if (!fs.existsSync(templatesDir)) {
-  console.error(`❌ Erreur: Le répertoire ${templatesDir} n'existe pas`);
-  process.exit(1);
+module.exports = {
+  githubUrlToLocalPath,
+};
+
+if (require.main === module) {
+  main();
 }
-
-// Lire tous les fichiers JSON
-const jsonFiles = fs.readdirSync(registryDir)
-  .filter(f => f.endsWith('.json'))
-  .sort();
-
-if (jsonFiles.length === 0) {
-  console.log('⚠️  Aucun fichier JSON trouvé dans le répertoire registry');
-  process.exit(0);
-}
-
-console.log(`📂 ${jsonFiles.length} fichier${jsonFiles.length > 1 ? 's' : ''} JSON trouvé${jsonFiles.length > 1 ? 's' : ''}\n`);
-
-// Traiter chaque fichier
-jsonFiles.forEach(jsonFile => {
-  processJSONFile(jsonFile);
-});
-
-// Afficher le résumé
-printSummary();
-
-// Code de sortie
-if (stats.jsonFiles.errors > 0 || stats.contentFiles.errors > 0) {
-  process.exit(1);
-}
-
