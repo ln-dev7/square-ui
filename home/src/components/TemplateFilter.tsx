@@ -73,11 +73,11 @@ const filters: { value: FilterType; label: string }[] = [
 export function PremiumBanner() {
   let { filter, counts } = useTemplateFilter()
 
-  if (filter !== 'premium') {
+  let extraCount = TOTAL_PREMIUM_TEMPLATES - counts.premium
+
+  if (filter !== 'premium' || extraCount <= 0) {
     return null
   }
-
-  let extraCount = Math.max(TOTAL_PREMIUM_TEMPLATES - counts.premium, 0)
 
   return (
     <div className="mx-auto mb-12 max-w-7xl px-6 lg:flex lg:px-8">
@@ -91,12 +91,10 @@ export function PremiumBanner() {
           >
             <p className="text-sm font-semibold text-gray-900 dark:text-white">
               Discover the {TOTAL_PREMIUM_TEMPLATES} premium templates
-              {extraCount > 0 && (
-                <span className="font-normal text-gray-500 dark:text-white/60">
-                  {' '}
-                  ({counts.premium} here + {extraCount} more)
-                </span>
-              )}
+              <span className="font-normal text-gray-500 dark:text-white/60">
+                {' '}
+                ({counts.premium} here + {extraCount} more)
+              </span>
             </p>
             <p className="mt-1 text-xs text-gray-600 dark:text-white/60">
               Get the full collection on{' '}
@@ -115,6 +113,12 @@ export function PremiumBanner() {
 export function TemplateFilterButtons() {
   let { filter, setFilter, counts } = useTemplateFilter()
 
+  let displayCounts: TemplateCounts = {
+    premium: TOTAL_PREMIUM_TEMPLATES,
+    free: counts.free,
+    all: TOTAL_PREMIUM_TEMPLATES + counts.free,
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8 absolute top-8 sm:top-12 left-0 right-0 z-10">
       <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
@@ -131,7 +135,7 @@ export function TemplateFilterButtons() {
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700',
                 )}
               >
-                {label} ({counts[value]})
+                {label} ({displayCounts[value]})
               </button>
             ))}
           </div>
