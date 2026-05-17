@@ -6,6 +6,7 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import {
   TemplateFilterProvider,
   TemplateFilterButtons,
+  PremiumBanner,
 } from '@/components/TemplateFilter'
 
 function Timeline() {
@@ -107,6 +108,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Timeline />
         <TemplateFilterButtons />
         <main className="space-y-16 py-24 sm:space-y-20 sm:py-28">
+          <PremiumBanner />
           {children}
         </main>
       </div>
