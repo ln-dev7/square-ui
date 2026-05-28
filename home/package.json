@@ -20,11 +20,11 @@
     "@vercel/analytics": "^1.6.1",
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.0",
-    "undici": "7.18.2",
+    "undici": "^7.26.0",
     "mdast-util-to-string": "^4.0.0",
     "mdx-annotations": "^0.1.4",
     "motion": "^10.17.0",
-    "next": "15.5.10",
+    "next": "15.5.18",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,13 +41,19 @@
   },
   "devDependencies": {
     "eslint": "^8.56.0",
-    "eslint-config-next": "15.5.10",
+    "eslint-config-next": "15.5.18",
     "glob": "^10.5.0",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "0.33.1"
   },
   "overrides": {
-    "glob": "^10.5.0"
+    "glob": "^10.5.0",
+    "minimatch": "^9.0.7",
+    "brace-expansion": "^2.0.3",
+    "flatted": "^3.4.2",
+    "ajv": "^6.14.0",
+    "postcss": "^8.5.10",
+    "picomatch": "^4.0.4"
   }
 }

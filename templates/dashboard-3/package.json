@@ -23,7 +23,7 @@
     "lodash": ">=4.17.23",
     "lucide-react": "^0.552.0",
     "minimatch": ">=9.0.7",
-    "next": "16.1.5",
+    "next": "16.2.6",
     "next-themes": "^0.4.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
@@ -38,8 +38,29 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.5",
+    "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@hono/node-server": "^1.19.13",
+      "@isaacs/brace-expansion": "^5.0.1",
+      "@modelcontextprotocol/sdk": "^1.29.0",
+      "brace-expansion": "^5.0.6",
+      "express-rate-limit": "^8.2.2",
+      "fast-uri": "^3.1.2",
+      "hono": "^4.12.23",
+      "ip-address": "^10.1.1",
+      "lodash": "^4.18.1",
+      "minimatch": "^10.2.3",
+      "path-to-regexp": "^8.4.2",
+      "picomatch": "^4.0.4",
+      "postcss": "^8.5.10",
+      "qs": "^6.15.2",
+      "undici": "^7.26.0",
+      "ajv": "^8.18.0",
+      "protocol-buffers-schema": "^3.6.1"
+    }
   }
 }
