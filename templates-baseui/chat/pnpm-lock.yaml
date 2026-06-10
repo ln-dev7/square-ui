@@ -18,6 +18,7 @@ overrides:
   protocol-buffers-schema: ^3.6.1
   qs: ^6.15.2
   undici: ^7.26.0
+  flatted: ^3.4.2
 
 importers:
 

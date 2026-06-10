@@ -59,7 +59,8 @@
       "qs": "^6.15.2",
       "undici": "^7.26.0",
       "ajv": "^8.18.0",
-      "protocol-buffers-schema": "^3.6.1"
+      "protocol-buffers-schema": "^3.6.1",
+      "flatted": "^3.4.2"
     }
   }
 }

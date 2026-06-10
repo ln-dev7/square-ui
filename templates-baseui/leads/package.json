@@ -52,7 +52,8 @@
       "picomatch": "^4.0.4",
       "postcss": "^8.5.10",
       "ajv": "^8.18.0",
-      "protocol-buffers-schema": "^3.6.1"
+      "protocol-buffers-schema": "^3.6.1",
+      "flatted": "^3.4.2"
     }
   }
 }
