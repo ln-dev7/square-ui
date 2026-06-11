@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useRef, useState } from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-const TOTAL_PREMIUM_TEMPLATES = 16
+const TOTAL_PREMIUM_TEMPLATES = 19
 
 type FilterType = 'all' | 'premium' | 'free'
 
