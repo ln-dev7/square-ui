@@ -1,0 +1,66 @@
+{
+  "name": "dashboard-2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.0.0",
+    "@hugeicons/core-free-icons": "^2.0.0",
+    "@hugeicons/react": "^1.1.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "diff": "^8.0.3",
+    "hono": "^4.12.23",
+    "js-yaml": "^4.1.1",
+    "next": "16.2.6",
+    "next-themes": "^0.4.6",
+    "qs": "^6.15.2",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "recharts": "^2.15.4",
+    "tailwind-merge": "^3.4.0",
+    "tw-animate-css": "^1.4.0",
+    "undici": "^7.26.0",
+    "usehooks-ts": "^3.1.1",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@hono/node-server": "^1.19.13",
+      "@isaacs/brace-expansion": "^5.0.1",
+      "@modelcontextprotocol/sdk": "^1.29.0",
+      "brace-expansion": "^5.0.6",
+      "express-rate-limit": "^8.2.2",
+      "fast-uri": "^3.1.2",
+      "hono": "^4.12.23",
+      "ip-address": "^10.1.1",
+      "lodash": "^4.18.1",
+      "minimatch": "^10.2.3",
+      "path-to-regexp": "^8.4.2",
+      "picomatch": "^4.0.4",
+      "postcss": "^8.5.10",
+      "qs": "^6.15.2",
+      "undici": "^7.26.0",
+      "ajv": "^8.18.0",
+      "protocol-buffers-schema": "^3.6.1",
+      "flatted": "^3.4.2"
+    }
+  }
+}
